@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/dd.css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <!--Begin Jquery Library -->
+    <!-- /lib -->
+    <script type="text/javascript" src="js/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.dd.min.js"></script>
+    <script type="text/javascript" src="js/lib/iCheck.js"></script>
+
+    <!-- /d3 -->
+    <script type="text/javascript" src="js/d3/EXECUTIVE_VIEW/what-my-spend-breakdown-chart.js"></script>
+    <script type="text/javascript" src="js/d3/EXECUTIVE_VIEW/when-my-savings-realized-chart.js"></script>
+    <script type="text/javascript" src="js/d3/EXECUTIVE_VIEW/where-my-risk-chart.js"></script>
+    
+    
+    <script src="js/filter.js"></script>
+    <script type="text/javascript" src="js/resizeD3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Pixel</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="EXECUTIVE_VIEW.html" class="active">
+                <span class="exec-icon icons left"></span>
+                <span>Executive</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="SPEND_ANALYSIS.html">
+                <span class="spend-icon icons left"></span>
+                <span>Spend</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="CATEGORY_SOURCING.html">
+                <span class="source-icon icons left"></span>
+                <span>Sourcing</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="project-icon icons left"></span>
+                <span>Project</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="BENEFITS_TRACKING.html">
+                <span class="benefits-icon icons left"></span>
+                <span>Benefits</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="contract-icon icons left"></span>
+                <span>Contract</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="risk-icon icons left"></span>
+                <span>Risk</span>
+                <i></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="filter-myspend-break-chart"></div>
+            <div class="filter-saving-realize"></div>
+            <div class="filter-risk-likelihood-chart"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Home<span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">Executive View</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Exective details -->
+          <div class="row">
+            <div class="content-container">
+              <div class="exective-view-main">
+                <div class="pages-sub-header row-left">
+                  <div class="pages-heading-box">
+                    <h4 class="left"><span class="exect-icon icons left"></span>Executive View</h4>
+                    <p class="receipt-date-txt right">
+                      Receipt Date: 1/1/2014 - 4/30/2015
+                    </p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="grey-banner-box">
+                    <div class="row">
+                      <div class="col-grey-boxs">
+                        <div class="grey-box-inner">
+                          <p class="grey-top-txt">
+                            <span class="blue-txt">+1.21%</span>
+                            <span class="blk-txt">5Qtr</span>
+                          </p>
+                          <p class="amount-txt">$9,882M</p>
+                          <span class="total-spend-txt">total spend</span>
+                        </div>
+                      </div>
+                      <div class="col-grey-boxs">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$5,155M</p>
+                            <span class="total-spend-txt">addressable spend</span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="col-grey-boxs">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$5.13M</p>
+                            <span class="total-spend-txt">target savings</span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="col-grey-boxs">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$5.13M</p>
+                            <span class="total-spend-txt">contracted savings</span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="col-grey-boxs">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$5.13M</p>
+                            <span class="total-spend-txt">realized savings to date</span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-left row-bottom-exec">
+                  <div class="how-my-spend-main">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="widget-layer-box how-am-perform frst-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>How am I Performing?</h4>
+                          </div>
+                          <div class="how-am-perform-table sort-table two-wid-box">
+                            <table class="main-table-view">
+                              <thead>
+                                <tr>
+                                  <th>Metrics</th>
+                                  <th>Current State</th>
+                                  <th>Target State</th>
+                                  <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Total Spend Under Management</td>
+                                  <td>$9,982M</td>
+                                  <td>$8,204M</td>
+                                  <td><span class="red-circle"></span></td>
+                                </tr>
+                                <tr>
+                                  <td>Realized Savings to Date</td>
+                                  <td>$3.54M</td>
+                                  <td>$4.25M</td>
+                                  <td><span class="green-circle"></span></td>
+                                </tr>
+                                <tr>
+                                  <td>Total Spend Under Active Pursuits</td>
+                                  <td>$50.43M</td>
+                                  <td>$75.24M</td>
+                                  <td><span class="red-circle"></span></td>
+                                </tr>
+                                <tr>
+                                  <td>Impact on Savings from Off-Track Projects</td>
+                                  <td>$5.48M</td>
+                                  <td>$2.52M</td>
+                                  <td><span class="yellow-circle"></span></td>
+                                </tr>
+                                <tr>
+                                  <td>% Spend with High-Risk and High-Impact Suppliers</td>
+                                  <td>9%</td>
+                                  <td>10%</td>
+                                  <td><span class="green-circle"></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="widget-layer-box spend-breakdown-main secnd-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>What is My Spend Breakdown?</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="spend-breakdown two-wid-box">
+                            <div class="spend-break-details">
+                              <div class="dropdown-new-line left">
+                                <p class="lbl-txt">
+                                  View Spend by
+                                </p>
+                                <div class="select-box left">
+                                  <select>
+                                    <option>Category</option>
+                                    <option>Lorem</option>
+                                    <option>Lorem</option>
+                                  </select>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                              <div class="right spend-slider-main left sub-slider-content">
+                                <p>
+                                  Top Category
+                                </p>
+                                <div class="slider-holder">
+                                  <div class="uislider-holder my-spend-slider left js-uislider">
+                                    <div class="js-top-category-slider">
+                                    </div>
+                                  </div>
+                                  <input type="text" class="js-cat-val slider-input-change my-spend-slider-input left">
+                                  <div class="clearfix"></div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <!-- Spend Breakdown chart -->
+                            <div class="spend-breakdown-graph myspend-break-chart">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-left">
+                  <div class="my-realized-risk-main">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="widget-layer-box my-savings-realized frst-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>When are My Savings Realized?</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="view-savings-by two-wid-box">
+                            <div class="dropdown-same-line">
+                              <p class="lbl-txt left">
+                                View Saving by
+                              </p>
+                              <div class="select-box left overtime-select">
+                                <select>
+                                  <option>Savings Over Time</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="select-box left quartely-select">
+                                <select>
+                                  <option>Quarterly</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="view-savings-by-graph when-saving-real-chart">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="widget-layer-box my-risk-main secnd-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>Where is My Risk and What is the Likelihood of this Risk Occu..</h4>
+                          </div>
+                          <div class="my-risk-sub two-wid-box">
+                            <div class="my-risk-details">
+                              <div class="dropdown-new-line left">
+                                <p class="lbl-txt">
+                                  View Spend by
+                                </p>
+                                <div class="select-box left">
+                                  <select>
+                                    <option>Category</option>
+                                    <option>Lorem</option>
+                                    <option>Lorem</option>
+                                  </select>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                              <div class="right myrisk-slider-main left sub-slider-content">
+                                <p>
+                                  Top Risk Supplier
+                                </p>
+                                <div class="slider-holder">
+                                  <div class="uislider-holder myrisk-slider left js-uislider">
+                                    <div class="js-top-risk-slider">
+                                    </div>
+                                  </div>
+                                  <input type="text" class="js-risk-val slider-input-change my-risk-slider-input left">
+                                  <div class="clearfix"></div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="spend-breakdown-graph risk-likelihood-chart">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

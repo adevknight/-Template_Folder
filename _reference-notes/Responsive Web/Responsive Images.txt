@@ -1,0 +1,61 @@
+/* Responsive Images */
+(References : http://blog.cloudfour.com/dont-use-picture-most-of-the-time/
+              http://usecases.responsiveimages.org/
+              https://dev.opera.com/articles/native-responsive-images/
+              http://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
+)
+
+> Common Use Cases :
+  1. Resolution Switching = Different Resolution use Different Images
+     E.g : Non-retina display  use 'jumbotron.jpg' while retina display uses 'jumbotron@2x.jpg'.
+  2. Art Directionv = Use Same Image for Different Resolution
+     E.g : Commonly used in 'hero image' with some text, then providing smaller version would not work because it will then distort the art and readability.
+> Solution of Case 1 (Resolution Switching)
+  .. Do not have to use <picture> just use <img> in HTML
+  .. Resolution switching case is when you will use same image with different resolution (quality) for many viewport conditions (breakpoints) and device-pixel-ratio (dpr).
+  .. SubCase 1 : Fixed Image
+     .. You want to place an image with fixed width of 500px (CSS Pixels) for non-retina (device-pixel-ratio=1) and also for retina display (device-pixel-ratio=2).
+     .. in HTML <img src="image.jpg" srcset="image@1.5x.jpg 1.5x, image@2x.jpg 2x" width="500" alt="Description">
+     .. Notes:
+        .. Put image.jpg (for dpr=1) in 'src' attribute - NON RETINA DISPLAY
+        .. Put image@1.5x.jpg (for dpr=1.5) in 'srcset' attribute - OPTIONAL
+        .. Put image@2x.jpg (for dpr=2) in 'srcset' attribute - RETINA DISPLAY
+        .. DONT FORGET to put 1.5x or 2x at the end of image file name.
+  .. SubCase 2 : Responsive Image
+     .. You want to place an image with 'responsive behaviour' for non-retina and retina devices.
+     .. Responsive Behaviour = Image width vary according viewport width. E.g you want image with 50% of viewport width at desktop but on mobile size you want it to 100% of the viewport width.
+     .. Look at HTML snippet below
+     <img sizes="   (max-width: 30em) 100vw,
+                    (max-width: 50em) 50vw,
+                    calc(33vw - 100px)"
+          srcset="  swing-200.jpg 200w,
+                    swing-400.jpg 400w,
+                    swing-800.jpg 800w,
+                    swing-1600.jpg 1600w"
+          src="     swing-400.jpg" 
+          alt="     Kettlebell Swing">
+      .. Explanation of above snippet :
+         .. 'sizes' (max-width: 30em) 100vw = IF the viewport width <= 30em (30 * Base Font Size) then the image size would be 100% of viewport (browser) width.
+         .. 'sizes' (max-width: 50em) 50vw = IF the viewport width <= 50em (50 * Base Font Size) then the image size would be 50% of viewport (browser) width.
+         .. 'sizes' calc(33vw - 100px) = IF it does not meet above condition the image width sizes = 33% of viewpoert width (browser) - 100px.
+         .. Notes : Browser will check media query on 'sizes' based on order, first matched element will be returned, on above case if we use mobile device with viewport width of 20em, it will select the 'max-width: 30em', not the 'max-width: 50em'.
+         .. 'srcset' = You put all of image source file based on their resolutions.
+         .. 'srcset' swing-200.jpg 200w = The 'swing-200.jpg' has 200px of resolution width.
+         .. and so on..
+         .. src swing-400.jpg = This is the default file source.
+         .. Browser will intelligently choose which image should be choosen to meet the responsive requirements by looking at 'sizes' media and conditional value then check dpr value of device screen and select appropiate image based on their width value.
+
+> Solution of Case 2 (Art Direction)
+  .. Art Direction case is when you will use same image with not only different in resolution (quality) but also in their proportions, crop area, copy text location, shot angle, etc, for many viewport conditions (breakpoints) and device-pixel-ratio (dpr).
+  .. Look at HTML snippet below
+  <picture>
+    <source media="(min-width: 45em)" srcset="large.jpg">
+    <source media="(min-width: 32em)" srcset="med.jpg">
+    <img src="small.jpg" alt="The president giving an award.">
+  </picture>
+  .. Explanation of above snippet :
+    .. <img> is must have tag, otherwise the image would not be displayed.
+    .. <img> also used as fallback.
+    .. Browser will scan the media queries from top to bottom. Start with <source> then <source> then <img>.
+    .. IF the viewport condition met with one of <source> media query then the 'srcset' of respected <source> will be downloaded.
+    .. IF the viewport condition did not meet any of the <source>s media query then <img> will be selected and displayed.

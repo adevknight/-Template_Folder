@@ -1,0 +1,12 @@
+1. Fixed Website
+	- Set width - No matter how much is your screen size the layout still same
+	- No media queries
+2. Fluid Website 
+	- Relative width - Built in percentages in width to make it
+	- No media queries
+3. Adaptive Website
+	- Set or Relative width - The widths are not necessarily built in fluid grid system
+	- Use media queries - Device & Resolution driven
+4. Responsive Website
+	- Relative width - Built in fluid grids
+	- Use media queries - Content & Design driven

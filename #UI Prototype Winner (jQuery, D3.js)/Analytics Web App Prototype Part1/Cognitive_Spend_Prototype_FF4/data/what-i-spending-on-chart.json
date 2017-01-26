@@ -1,0 +1,113 @@
+{
+  "heading": "What am I Spending On",
+  "dataset": {
+    "category": [
+      {
+        "name": "Addressable Spend",
+        "color": "#8BC7B1",
+        "values": [
+          {"name": "CAT_1", "value": 40},
+          {"name": "CAT_2", "value": 50},
+          {"name": "CAT_3", "value": 10},
+          {"name": "CAT_4", "value": 45},
+          {"name": "CAT_5", "value": 30},
+          {"name": "CAT_6", "value": 20},
+          {"name": "CAT_7", "value": 15},
+          {"name": "CAT_8", "value": 34},
+          {"name": "CAT_9", "value": 50},
+          {"name": "CAT_10", "value": 45},
+          {"name": "CAT_11", "value": 20},
+          {"name": "CAT_12", "value": 30},
+          {"name": "CAT_13", "value": 10},
+          {"name": "CAT_14", "value": 15},
+          {"name": "CAT_15", "value": 35},
+          {"name": "CAT_16", "value": 25},
+          {"name": "CAT_17", "value": 40},
+          {"name": "CAT_18", "value": 10},
+          {"name": "CAT_19", "value": 5},
+          {"name": "CAT_20", "value": 25}
+        ]
+      },
+      {
+        "name": "Non-Addressable",
+        "color": "#E69798",
+        "values": [
+          {"name": "CAT_1", "value": 25},
+          {"name": "CAT_2", "value": 45},
+          {"name": "CAT_3", "value": 25},
+          {"name": "CAT_4", "value": 55},
+          {"name": "CAT_5", "value": 10},
+          {"name": "CAT_6", "value": 30},
+          {"name": "CAT_7", "value": 45},
+          {"name": "CAT_8", "value": 30},
+          {"name": "CAT_9", "value": 25},
+          {"name": "CAT_10", "value": 40},
+          {"name": "CAT_11", "value": 30},
+          {"name": "CAT_12", "value": 15},
+          {"name": "CAT_13", "value": 20},
+          {"name": "CAT_14", "value": 35},
+          {"name": "CAT_15", "value": 45},
+          {"name": "CAT_16", "value": 15},
+          {"name": "CAT_17", "value": 50},
+          {"name": "CAT_18", "value": 30},
+          {"name": "CAT_19", "value": 25},
+          {"name": "CAT_20", "value": 15}
+        ]
+      }
+    ],
+    "sub-category": [
+      {
+        "name": "Addressable Spend",
+        "color": "#8BC7B1",
+        "values": [
+          {"name": "S-CAT1", "value": 30},
+          {"name": "S-CAT2", "value": 40},
+          {"name": "S-CAT3", "value": 20},
+          {"name": "S-CAT4", "value": 15},
+          {"name": "S-CAT5", "value": 50},
+          {"name": "S-CAT6", "value": 25},
+          {"name": "S-CAT7", "value": 10},
+          {"name": "S-CAT8", "value": 13},
+          {"name": "S-CAT9", "value": 20},
+          {"name": "S-CAT10", "value": 15},
+          {"name": "S-CAT11", "value": 10},
+          {"name": "S-CAT12", "value": 40},
+          {"name": "S-CAT13", "value": 15},
+          {"name": "S-CAT14", "value": 35},
+          {"name": "S-CAT15", "value": 40},
+          {"name": "S-CAT16", "value": 5},
+          {"name": "S-CAT17", "value": 10},
+          {"name": "S-CAT18", "value": 20},
+          {"name": "S-CAT19", "value": 15},
+          {"name": "S-CAT20", "value": 35}
+        ]
+      },
+      {
+        "name": "Non-Addressable",
+        "color": "#E69798",
+        "values": [
+          {"name": "S-CAT1", "value": 20},
+          {"name": "S-CAT2", "value": 15},
+          {"name": "S-CAT3", "value": 35},
+          {"name": "S-CAT4", "value": 25},
+          {"name": "S-CAT5", "value": 20},
+          {"name": "S-CAT6", "value": 30},
+          {"name": "S-CAT7", "value": 15},
+          {"name": "S-CAT8", "value": 40},
+          {"name": "S-CAT9", "value": 5},
+          {"name": "S-CAT10", "value": 10},
+          {"name": "S-CAT11", "value": 35},
+          {"name": "S-CAT12", "value": 15},
+          {"name": "S-CAT13", "value": 10},
+          {"name": "S-CAT14", "value": 25},
+          {"name": "S-CAT15", "value": 15},
+          {"name": "S-CAT16", "value": 35},
+          {"name": "S-CAT17", "value": 20},
+          {"name": "S-CAT18", "value": 10},
+          {"name": "S-CAT19", "value": 15},
+          {"name": "S-CAT20", "value": 25}
+        ]
+      }
+    ]
+  }
+}

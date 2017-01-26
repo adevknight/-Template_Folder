@@ -1,0 +1,36 @@
+{
+  "heading": "Sourcing Results",
+  "upperData": {
+    "data1": "$177",
+    "data2": "23.34%",
+    "data3": "$136M",
+    "data4": "76%"
+  },
+  "dataset": [
+    {
+      "name": "Suppiler 1",
+      "color": "#f9ac4d",
+      "value": 90
+    },
+    {
+      "name": "Suppiler 2",
+      "color": "#5aaab1",
+      "value": 80
+    },
+    {
+      "name": "Suppiler 3",
+      "color": "#d65153",
+      "value": 70
+    },
+    {
+      "name": "Suppiler 4",
+      "color": "#e999c2",
+      "value": 60
+    },
+    {
+      "name": "Suppiler 5",
+      "color": "#d43385",
+      "value": 50
+    }
+  ]
+}

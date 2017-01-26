@@ -1,0 +1,77 @@
+> Block Formatting Context (BFC)
+  A <div> will considered under Block Formatting Context 
+  if one or many of these conditions are met:
+
+  1.  float: right;
+  2.  float: left;
+  3.  overflow: hidden; - MOST USED/FAVORITE
+  4.  overflow: scroll;
+  5.  overflow: auto;
+  6.  overflow: overflow-x;
+  7.  overflow: overflow-y;
+  8.  display: inline-block;
+  9.  display: table-cell;
+  10. display: table-caption;
+  11. display: flex;
+  12. display: inline-flex;
+  13. position: absolute;
+  14. position: fixed;
+> Comparison of <div> with BFC vs <div> without BFC
+  
+  1) Margin Collapsing
+  Margin Collapsing only happen in vertical margin properties (top and bottom margin).
+  A Parent Element with BFC will contain all child margins
+  - without BFC
+    > IF
+      <div class="container">
+        <p style="margin:20px">Lorem</p>
+      </div>
+      THEN
+        The margin of <p> will sit outside of <div> and
+        The height of <div> = The height of <p>
+        The widht of <div> = The left margin of <p> + The width of <p> + The right margin of <p>
+  
+  - with BFC
+    > IF
+      <div class="container" style:"overflow:hidden">
+        <p style="margin:20px">Lorem</p>
+      </div>
+      THEN
+        The margin of <p> will sit inside of <div> and
+        The height of <div> = The top margin of <p> + The height of <p> + The bottom margin of <p>
+        The width of <div> = The left margin of <p> + The width of <p> + The right margin of <p>
+
+  2) Clearing Float Childrens
+  By nature a <div> or a block element that contain one or many floated child elements will ignore their presense,
+  in essense, they were just ignoring them and do not properly contain them as it suppose to be.
+    Examples:
+      <div class="container">
+        <div class="float-left">LEFT</div>
+        <div class="float-right">RIGHT</div>
+      </div>
+
+    IF we don't specify the .container height (Most of the time we won't specify the height),
+    then the .container will have no height at all, eventhough the .float-left and .float-right clearly have some height.
+    This is what we called anomaly of float container.
+  
+  In order to give the auto height to the .container so it can really contain the .float-left and .float-right we must apply
+  either a BFC with overflow: hidden | auto; or A CLEARFIX CLASS to the .container.
+
+  3) BFC do not Overlap Float
+  - without BFC
+    > IF
+      <div>
+        <div class="div-1" style="float:left">FLOAT</div>
+        <div class="div-2">Lorem Ipsum Dolor Sit Amet</div>
+      </div>
+      THEN
+        The .div-2 will wrap around (flow under) .div-1 if the content of .div-2 need much larger space than .div-1.
+
+  - with BFC
+    > IF
+      <div>
+        <div class="div-1" style="float:left">FLOAT</div>
+        <div class="div-2" style="overflow:hidden">Lorem Ipsum Dolor Sit Amet</div>
+      </div>
+      THEN
+        The .div-2 will NOT wrap around (flow under) .div-1 if the content of .div-2 need much larger space than .div-1.

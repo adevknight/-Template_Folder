@@ -1,0 +1,53 @@
+{
+  "heading": "What is My Spend Breakdown?",
+  "dataset": {
+    "name": "all business",
+    "children": [
+      {
+        "name": "BU_1",
+        "color": "#8bc7b1",
+        "children": [
+          {"name": "1", "value": 100}
+        ]
+      },
+      {
+        "name": "BU_2",
+        "color": "#d43385",
+        "children": [
+          {"name": "2", "value": 60},
+          {"name": "3", "value": 40}
+        ]
+      },
+      {
+        "name": "BU_3",
+        "color": "#e8954d",
+        "children": [
+          {"name": "4", "value": 70},
+          {"name": "5", "value": 40},
+          {"name": "7", "value": 30}
+        ]
+      },
+      {
+        "name": "BU_4",
+        "color": "#5aaab1",
+        "children": [
+          {"name": "6", "value": 40},
+          {"name": "11", "value": 20},
+          {"name": "12", "value": 8},
+          {"name": "13", "value": 7},
+          {"name": "14", "value": 6},
+          {"name": "15", "value": 5}
+        ]
+      },
+      {
+        "name": "BU_5",
+        "color": "#de7475",
+        "children": [
+          {"name": "8", "value": 30},
+          {"name": "9", "value": 10},
+          {"name": "10", "value": 30}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link href="css/chart.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--Begin Jquery Library -->
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/scattePlot.js"></script>
+    <script type="text/javascript" src="js/boxPlot.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Deloitte</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li class="opportunities-li">
+              <a href="javascript:;" class="active">
+                <span class="opportn-icon icons left"></span>
+                <span class="left">Opportunities</span>
+                <span class="yellow-arrow left"></span>
+                <i></i>
+                <div class="clearfix"></div>
+              </a>
+              <!-- opportunities inner nav -->
+              <ul class="opportun-inner-nav">
+                <li>
+                  <a href="01-SPAN.html">Span_01</a>
+                </li>
+                <li>
+                  <a href="02-SPAN.html">Span_02</a>
+                </li>
+                <li>
+                  <a href="03-SPAN.html">Span_03</a>
+                </li>
+                <li>
+                  <a href="04-SPAN.html">Span_04</a>
+                </li>
+                <li>
+                  <a href="05-SPAN.html">Span_05</a>
+                </li>
+                <li>
+                  <a href="06-SPAN.html">Span_06</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="strategic-icon icons left"></span>
+                <span class="left">Strategic</span>
+                <span class="yellow-arrow left"></span>
+                <i></i>
+                <div class="clearfix"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="by-grade-boxplot-wrapper"></div>
+            <div class="by-layer-boxplot-wrapper"></div>
+            <div class="by-family-boxplot-wrapper"></div>
+            <div class="tenure-compensation-scatteplot-wrapper"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Opportunities <span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">Cash Compensation Analysis</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Analysis details -->
+          <div class="analysis-details-main">
+            <div class="analysis-state-head">
+              <h3><span class="current-state-icon icons left"></span>Cash Compensation Analysis</h3>
+            </div>
+            <!-- Cash Comp by Grade  -->
+            <div class="row row-left">
+              <div class="analysis-layer-box cash-comp-grade">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Cash Comp by Grade</h4>
+                </div>
+                <div class="scale-chart-box cash-comp-grade-graph">
+                  <div class="comp-cash-legend">
+                    <ul>
+                      <li>
+                        <a href="javascript:;">
+                          <i></i>
+                          <span>0.00</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <i></i>
+                          <span>0.00</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="layer-graph-box">
+                    <div class="boxplot-by-grade"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Comp by Layer -->
+            <div class="row row-left">
+              <div class="analysis-layer-box cash-by-layer">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Comp by Layer</h4>
+                </div>
+                <div class="scale-chart-box cash-by-layer-graph">
+                  <div class="layer-graph-box">
+                    <div class="boxplot-by-layer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Job Families and Compensation -->
+            <div class="row row-left">
+              <div class="analysis-layer-box job-family-layer">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Job Families and Compensation</h4>
+                </div>
+                <div class="scale-chart-box job-family-layer-graph">
+                  <div class="layer-graph-box">
+                    <div class="boxplot-by-families"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tenure and Compensation -->
+            <div class="row row-left">
+              <div class="analysis-layer-box tenure-comps-layer">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Tenure and Compensation</h4>
+                </div>
+                <div class="scale-chart-box tenure-comps-graph">
+                  <div class="layer-graph-box">
+                    <div class="tenure-comapensation-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

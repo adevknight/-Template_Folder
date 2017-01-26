@@ -1,0 +1,81 @@
+/* ---< _tool-alignments.scss >--- */
+
+// >> FLEX Based Alignments
+// ------------------------------------
+@mixin flex-align-parent($direction: row, $align: both) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $align == both {
+    align-items: center;
+    justify-content: center;
+  } @else if $align == ver {
+    @if $direction == row {
+      align-items: center;
+    } @else if $direction == col {
+      justify-content: center;
+    }
+  } @else if $align == hor {
+    @if $direction == row {
+      justify-content: center;
+    } @else if $direction == col {
+      align-items: center;
+    }
+  }
+}
+
+// >> NON FLEX Based Alignments
+// ------------------------------------
+
+// Block Elements
+// --------------------------
+// Horizontally BLOCK
+@mixin block-hor-mine {
+  margin: 0 auto; 
+}
+// Vertically BLOCK
+@mixin block-ver-parent {
+  position: relative;
+}
+@mixin block-ver-many {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// Both BLOCK
+@mixin block-both-parent {
+  position: relative;
+}
+@mixin block-both-many {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+// Inline Elements
+// --------------------------
+// Horizontally INLINE
+@mixin inline-hor-parent {
+  text-align: center; 
+}
+// Vertically INLINE
+@mixin inline-ver-parent {
+  position: relative;
+}
+@mixin inline-ver-many {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// Both INLINE
+@mixin inline-both-parent {
+  position: relative;
+}
+@mixin inline-both-many {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}

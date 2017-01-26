@@ -1,0 +1,71 @@
+{
+  "heading": "Span of Control by Division",
+  "layers": [
+    {
+      "name": "Robert weideman (enterprise)",
+      "xPositive": 6.5,
+      "yPositive": 6.5
+    },
+    {
+      "name": "satish maripuri (healthcare)",
+      "xPositive": 5.9,
+      "yPositive": 5.9
+    },
+    {
+      "name": "robert schassler (mobility)",
+      "xPositive": 6.1,
+      "yPositive": 6.1
+    },
+    {
+      "name": "williams robbins (sales)",
+      "xPositive": 5.7,
+      "yPositive": 5.7
+    },
+    {
+      "name": "michael rich (imaging)",
+      "xPositive": 5.4,
+      "yPositive": 5.4
+    },
+    {
+      "name": "vladimir sejroha (corp-R&D)",
+      "xPositive": 5.0,
+      "yPositive": 5.0
+    },
+    {
+      "name": "thomas brown iv (corp-IT)",
+      "xPositive": 4.3,
+      "yPositive": 4.3
+    },
+    {
+      "name": "daniel tempesta (corp-finance)",
+      "xPositive": 3.8,
+      "yPositive": 3.8
+    },
+    {
+      "name": "down howart (corp hr)",
+      "xPositive": 3.6,
+      "yPositive": 3.6
+    },
+    {
+      "name": "Ken siegel (legal)",
+      "xPositive": 3.3,
+      "yPositive": 3.3
+    },
+    {
+      "name": "richard martel (procurement/facilities)",
+      "xPositive": 3.2,
+      "yPositive": 3.2
+    },
+    {
+      "name": "adam bowden (corp-development)",
+      "xPositive": 2.7,
+      "yPositive": 2.7
+    }
+  ],
+  "axisInfo": [
+    {
+      "yAxisText": "MANAGEMENT LEVEL",
+      "xAxisText": "AVERAGE SOC"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+/* Retina Device Styling Guide */
+
+> Always Make Image/Icon Assets as 2 Category : @1x.jpg/.png and @2x.jpg/.png and possibly @3x.jpg/.png
+
+> In HTML Meta Tag : DO NOT FORGET 'width=device-width' and 'initial-scale=1'
+
+> Following steps are assuming that default size of your PSD stroyboard scale is same as 'Device Pixel' of iOS Retina Devices
+  1> Export Image/Icon Assets as @2x.jpg/.png - resolution would be same (default) as in provided PSD storyboard
+  2> Export Image/Icon Assets as @1x.jpg/.png - resolution would be 1/2 size of size in provided PSD storyboard
+  3> In HTML: 
+     - Any Image in HTML use 'sizes' and 'srcset' attributes. 
+       Read : Responsive Images.txt
+  4> In CSS : 
+     - For any CSS Property that use 'px' or 'rem' or 'em' use 1/2 size of px in provided PSD storyboard,
+       including 'image container' size, 'font-size', 'margin', 'padding', etc.
+     - Special Case for 'background-image' property the value should be either @1x.jpg/.png or @2x.jpg/.png, 
+       the method to differentiate the values is using Retina CSS Media Query. Remember to put 'background-size' property alongside with 'background-image' inside the Retina CSS Media Query. 
+       However put in mind that the 'background-size' is always in the same size (in CSS Pixel) accross all Media Query that was created, which is 1/2 size of px in provided PSD storyboard.  

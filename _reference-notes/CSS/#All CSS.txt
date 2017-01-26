@@ -1,0 +1,168 @@
+* Animatable/Transitionable Properties
+
+/* Layout Properties */
+display:
+  @include flex-align-parent($direction:row, $align:both);
+  @extend %dis-block;
+  @extend %dis-inline;
+float:
+  @extend %float-left;
+    .float-left
+  @extend %float-right;
+    .float-right
+clear:
+  @extend %clearfix;
+  .clearfix
+
+position:
+  @extend %pos-rel;
+  @extend %pos-abs;
+  @extend %pos-fix;
+top: *
+right: *
+buttom: *
+left: *
+clip:
+z-index: *
+
+margin: *
+  @extend %mar-0;
+  @extend %mar-auto;
+padding: *
+  @extend %padd-0;
+
+overflow:
+  @extend %ov-hidden;
+  @extend %ov-auto;
+overflow-x:
+overflow-y:
+
+visibility: *
+opacity: * // opacity of element
+
+line-height: *
+text-align:
+  @extend %text-left;
+    .text-left
+  @extend %text-right;
+    .text-right
+  @extend %text-ctr;
+    .text-ctr
+vertical-align: *
+  @extend %ver-middle;
+
+rotation:
+
+/* Box */
+width: *
+  @include full-width($maxPX:initial);
+  @extend %width-100;
+max-width: *
+min-width: *
+height: *
+max-height: *
+min-height: *
+
+/* Border & Box Shadow */
+outline: (Line that is drawn around an element outside/wrapping the border)
+border: 10px solid red; (ShortHand)
+border-width: *
+border-style:
+border-color: *
+border-radius:
+border-collapse:
+border-image:
+box-shadow:
+
+/* Background */
+background: url('../i/image-1.png') left top no-repeat, url('../i/image-2.png') right top no-repeat, url('../i/image-3') right bottom no-repeat; (ShortHand)
+background-image:
+background-position: *
+background-size: 20px 30px, 40px 50px, 60px 70px;
+background-repeat:
+background-attachment:
+background-origin:
+background-clip:
+background-color: *
+
+/* Text */
+color: *
+font:
+font-family:
+font-style:
+font-weight: *
+font-size: *
+direction: // writing direction
+letter-spacing: *
+text-decoration: (none, underline, overline, or line-through)
+text-indent: *
+text-shadow: 10px 20px 10px #fff; * (http://www.css3-generator.de/text-shadow.html)
+text-transform:
+word-wrap: *
+
+/* Others */
+list-style:
+list-style-type:
+list-style-position:
+list-style-image:
+cursor:
+
+/* Transform */
+transform: (http://www.css3-generator.de/transform.html)
+transform-origin: x y; (in top right bottom left center, px, or %)
+transform-style:
+transform-box:
+perspective:
+perspective-origin:
+backface-visibility:
+
+/* Transition - The Basic Form of Animation */
+transition: all 2000ms ease 1s;
+transition-property: all;
+transition-property: background-color, width;
+                                              (Must be "Animatable/Transitionable" Properties
+                                              - Look at * symbol above
+                                              - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+transition-duration: 2000ms;
+transition-timing-function: ease;
+                                  (Identical with animation-timing-function
+                                  - http://matthewlein.com/ceaser/)
+transition-delay: 1s;
+
+/* Animation */
+@keyframes animationName {
+  from {
+    width: 10px;
+    background-color: red;
+  }
+  to {
+    width: 100px;
+    background-color: blue;
+  }
+}
+@keyframes animationName {
+  0% {
+    width: 10px;
+    background-color: red;
+  }
+  50% {
+    width: 100px;
+    background-color: blue;
+  }
+  100% {
+    width: 1000px;
+    background-color: orange;
+  }
+}
+animation: animationName 2s linear 2000ms 3 normal;
+animation-name: animationName;
+animation-duration: 2s
+animation-timing-function: linear;
+                                    (Identical with transition-timing-function,
+                                      but its applied to each keyframe point rather than whole animation-duration
+                                    - http://matthewlein.com/ceaser/)
+animation-delay: 2000ms
+animation-iteration-count: 3; (Default is 1, Accept only "positive integer" or "infinite")
+animation-direction: normal; (Direction of keyframe should be applied: normal (0% to 100%), reverse (100% to 0%), alternate, or alternate-reverse)
+
+animation-play-state: (running or paused)

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/dd.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.custom-scrollbar.css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <!--Begin Jquery Library -->
+    <!-- /lib -->    
+    <script type="text/javascript" src="js/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.custom-scrollbar.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.dd.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.tablesorter.js"></script>
+
+    <!-- /d3 -->
+    <script src="js/d3/BENEFITS_TRACKING/variance-heat-chart.js"></script>
+    <script src="js/d3/BENEFITS_TRACKING/what-my-savings-realized-chart.js"></script>
+    <script src="js/d3/BENEFITS_TRACKING/when-my-savings-realized-chart.js"></script>
+    
+    
+    <script src="js/filter.js"></script>
+    <script type="text/javascript" src="js/resizeD3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Pixel</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="EXECUTIVE_VIEW.html">
+                <span class="exec-icon icons left"></span>
+                <span>Executive</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="SPEND_ANALYSIS.html">
+                <span class="spend-icon icons left"></span>
+                <span>Spend</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="CATEGORY_SOURCING.html">
+                <span class="source-icon icons left"></span>
+                <span>Sourcing</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="project-icon icons left"></span>
+                <span>Project</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="BENEFITS_TRACKING.html" class="active">
+                <span class="benefits-icon icons left"></span>
+                <span>Benefits</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="contract-icon icons left"></span>
+                <span>Contract</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="risk-icon icons left"></span>
+                <span>Risk</span>
+                <i></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="filter-variance-heat"></div>
+            <div class="filter-what-saving-realize filter-what-saving-realize-common"></div>
+            <div class="filter-what-saving-realize2 filter-what-saving-realize-common"></div>
+            <div class="filter-saving-realize"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Home<span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">Benefits Tracking</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Analysis details -->
+          <div class="row">
+            <div class="content-container">
+              <div class="benefits-tracking-main">
+                <div class="pages-sub-header row-left">
+                  <div class="pages-heading-box">
+                    <h4 class="left"><span class="benefit-dollar icons left"></span>Benefits Tracking</h4>
+                    <p class="receipt-date-txt right">
+                      Receipt Date: 1/1/2014 - 4/30/2015
+                    </p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="grey-banner-box">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="grey-box-inner">
+                          <p class="grey-top-txt">
+                            <span class="blue-txt">+1.21%</span>
+                            <span class="blk-txt">5Qtr</span>
+                          </p>
+                          <p class="amount-txt">$3,865M</p>
+                          <span class="total-spend-txt">total spend</span>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$1.34M</p>
+                            <span class="total-spend-txt">target savings</span>
+                          </div>
+                          <div class="spend-details-mark left">
+                            <i class="left-brace icons"></i>
+                            <i class="right-brace icons"></i>
+                            <i></i>
+                            <div class="grey-top-txt">
+                              <p class="blue-txt">0.14%</p>
+                              <p class="blk-txt">of total spend</p>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$1.05M</p>
+                            <span class="total-spend-txt">contracted savings</span>
+                          </div>
+                          <div class="spend-details-mark left">
+                            <i class="left-brace icons"></i>
+                            <i class="right-brace icons"></i>
+                            <i></i>
+                            <div class="grey-top-txt">
+                              <p class="blue-txt">0.14%</p>
+                              <p class="blk-txt">of total spend</p>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="grey-box-inner right">
+                          <div class="left">
+                            <p class="amount-txt">$1.98M</p>
+                            <span class="total-spend-txt">realized savings to date</span>
+                          </div>
+                          <div class="spend-details-mark left">
+                            <i class="left-brace icons"></i>
+                            <i class="right-brace icons"></i>
+                            <i></i>
+                            <div class="grey-top-txt">
+                              <p class="blue-txt">0.14%</p>
+                              <p class="blk-txt">of total spend</p>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Where are My Savings Discrepancies -->
+                <div class="widget-layer-box row-left">
+                  <div class="layer-box-head">
+                    <span class="green-up-icon icons left"></span>
+                    <h4>Where are My Savings Discrepancies</h4>
+                  </div>
+                  <div class="key-off-variance">
+                    <!-- KEY OFF-TRACK PROJECTS -->
+                    <div class="widget-layer-box key-off-track">
+                      <div class="layer-box-head">
+                        <span class="green-up-icon icons left"></span>
+                        <h4>KEY OFF-TRACK PROJECTS</h4>
+                      </div>
+                      <div class="sort-table">
+                        <table class="main-table-view key-off-track-table">
+                          <thead>
+                            <tr>
+                              <th><span class="tab-col">Project ID<span class="yellow-arrow"></span></span></th>
+                              <th><span class="tab-col">Category<span class="yellow-arrow"></span></span></th>
+                              <th><span class="tab-col">Sub-Category<span class="yellow-arrow"></span></span></th>
+                              <th><span class="tab-col">Supplier<span class="yellow-arrow"></span></span></th>
+                              <th><span class="tab-col">Variance<span class="yellow-arrow"></span></span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>a1234ABCD</td>
+                              <td>acategory_1</td>
+                              <td>aSub-category_1</td>
+                              <td>aSupplier_1</td>
+                              <td>aVariance_1</td>
+                            </tr>
+                            <tr>
+                              <td>b1234ABCD</td>
+                              <td>bcategory_1</td>
+                              <td>bSub-category_1</td>
+                              <td>bSupplier_1</td>
+                              <td>bVariance_1</td>
+                            </tr>
+                            <tr>
+                              <td>c1234ABCD</td>
+                              <td>category_1</td>
+                              <td>cSub-category_1</td>
+                              <td>cSupplier_1</td>
+                              <td>cVariance_1</td>
+                            </tr>
+                            <tr>
+                              <td>1234ABCD</td>
+                              <td>category_1</td>
+                              <td>Sub-category_1</td>
+                              <td>Supplier_1</td>
+                              <td>Variance_1</td>
+                            </tr>
+                            <tr>
+                              <td>1234ABCD</td>
+                              <td>category_1</td>
+                              <td>Sub-category_1</td>
+                              <td>Supplier_1</td>
+                              <td>Variance_1</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- VARIANCE HEAT MAP -->
+                    <div class="widget-layer-box var-heat-map">
+                      <div class="layer-box-head">
+                        <span class="green-up-icon icons left"></span>
+                        <h4>VARIANCE HEAT MAP</h4>
+                      </div>
+                      <div class="var-heat-map-innner">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="variance-det-box">
+                              <p class="lbl-txt">View Variance by</p>
+                              <div class="variance-det-items">
+                                <label>
+                                  <input type="radio" name="variance" checked>
+                                  <i class="custom-radio"></i>
+                                  <span>Amount</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="variance">
+                                  <i class="custom-radio"></i>
+                                  <span>Percentage</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="variance-det-box">
+                              <p class="lbl-txt">Choose Axis Settings</p>
+                              <div class="variance-det-items">
+                                <div class="drop-down-box">
+                                  <p class="left">
+                                    X - axis
+                                  </p>
+                                  <div class="select-box left">
+                                    <select>
+                                      <option>Region</option>
+                                      <option>Lorem</option>
+                                      <option>Lorem</option>
+                                    </select>
+                                  </div>
+                                  <div class="clearfix"></div>
+                                </div>
+                                <div class="drop-down-box">
+                                  <p class="left">
+                                    Y - axis
+                                  </p>
+                                  <div class="select-box left">
+                                    <select>
+                                      <option>Category</option>
+                                      <option>Lorem</option>
+                                      <option>Lorem</option>
+                                    </select>
+                                  </div>
+                                  <div class="clearfix"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="variance-det-box">
+                              <p class="lbl-txt">View Variance Between</p>
+                              <!-- Variance Btw -->
+                              <div class="variance-det-items variance-btw-box">
+                                <div class="drop-down-box">
+                                  <div class="select-box left">
+                                    <select>
+                                      <option>Target Savings</option>
+                                      <option>Lorem</option>
+                                      <option>Lorem</option>
+                                    </select>
+                                  </div>
+                                  <p class="left">
+                                    and
+                                  </p>
+                                  <div class="select-box left">
+                                    <select>
+                                      <option>Contracted Savings</option>
+                                      <option>Lorem</option>
+                                      <option>Lorem</option>
+                                    </select>
+                                  </div>
+                                  <div class="clearfix"></div>
+                                </div>
+                              </div>
+                              <!-- amount less -->
+                              <div class="variance-det-box variance-amount-less-main">
+                                  <p class="lbl-txt">Exlude Amounts Where Variance is Less Than</p>
+                                  <div class="variance-amount-less-slider left js-uislider">
+                                    <!-- Amont range slider -->
+                                    <div class="js-amount-slider">
+                                    </div>
+                                  </div>
+                                  <div class="variance-amount-less-input left">
+                                    <p class="left">
+                                      Or
+                                    </p>
+                                    <input type="text" class="less-amount-input-box left">
+                                  </div>
+                                  <div class="clearfix"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="var-heat-map-chart">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- What are My Realized Savings Savings Realized? -->
+                <div class="row-left">
+                  <div class="my-realized-savings-main">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="widget-layer-box my-realized-savings frst-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>What are My Realized Savings</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="two-wid-box">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="analyse-graph-savings analyze-graph-one">
+                                  <div class="dropdown-new-line">
+                                    <p class="lbl-txt">
+                                      Analyze Graph 1 by
+                                    </p>
+                                    <div class="select-box left">
+                                      <select>
+                                        <option>Business Unit</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                      </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                  </div>
+                                  <div class="units-avail-box">
+                                    <p>
+                                      20 Business units are available
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="analyse-graph-savings analyze-graph-two">
+                                  <div class="dropdown-new-line">
+                                    <p class="lbl-txt">
+                                      Analyze Graph 2 by
+                                    </p>
+                                    <div class="select-box left">
+                                      <select>
+                                        <option>Category</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                      </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                  </div>
+                                  <div class="units-avail-box">
+                                    <p>
+                                      20 Business units are available
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- horizontal stcked chart -->
+                            <div class="analyse-graph-graph-legend benefit-what-saving-chart">
+                            </div>
+                            <p class="note-scroll-txt">
+                              Note: Scroll down to see more business unit
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="widget-layer-box my-savings-realized secnd-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>When are My Savings Realized?</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="view-savings-by two-wid-box">
+                            <div class="dropdown-same-line">
+                              <p class="lbl-txt left">
+                                View Saving by
+                              </p>
+                              <div class="select-box left overtime-select">
+                                <select>
+                                  <option>Savings Over Time</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="select-box left quartely-select">
+                                <select>
+                                  <option>Quarterly</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="view-savings-by-graph when-saving-real-chart">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

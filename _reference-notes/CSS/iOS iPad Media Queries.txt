@@ -1,0 +1,53 @@
+/* General Media Queries for Retina Display */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+
+}
+
+@media (-webkit-device-pixel-ratio: 2), (resolution: 2dppx) {
+
+}
+
+/* iPad (1st Gen) */
+// Height : 1024px
+// Width : 768px
+// PPI : 132ppi (Not Retina)
+
+/* iPad (2nd Gen) */
+// Height : 1024px
+// Width : 768px
+// PPI : 132ppi (Not Retina)
+
+/* iPad (3rd Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 264ppi (Retina)
+
+/* iPad (4th Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 264ppi (Retina)
+/********************************/
+/* iPad Air (1st Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 264ppi (Retina)
+
+/* iPad Air (2nd Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 264ppi (Retina)
+/********************************/
+/* iPad Mini (1st Gen) */
+// Height : 1024px
+// Width : 768px
+// PPI : 163ppi (Not Retina)
+
+/* iPad Mini (2nd Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 326ppi (Retina)
+
+/* iPad Mini (3rd Gen) */
+// Height : 2048px
+// Width : 1536px
+// PPI : 326ppi (Retina)

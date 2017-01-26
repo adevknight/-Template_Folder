@@ -1,0 +1,36 @@
+/* General Media Queries for Retina Display */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+
+}
+
+@media (-webkit-device-pixel-ratio: 2), (resolution: 2dppx) {
+
+}
+
+/* iPhone 4, 4S */
+// Height : 960px (Device Pixels)
+// Width : 640px (Device Pixels)
+// PPI : 326ppi (Retina)
+
+/* iPhone 5, 5S, 5C */
+// Height : 1136px (Device Pixels)
+// Width : 640px (Device Pixels)
+// PPI : 326ppi (Retina)
+
+// For Working with Safari (Note : In Safari Viewing Page Height != Device Height)
+@media only screen and (min-device-width : 320px) // (CSS Pixels)
+and (max-device-width : 568px) // (CSS Pixels)
+and (-webkit-min-device-pixel-ratio : 2) // Formula = device-pixel-ratio = (Device Pixels) / CSS Pixels
+and (oriention : portrait) {
+
+}
+
+/* iPhone 6 */
+// Height : 1334px (Device Pixels)
+// Width : 750px (Device Pixels)
+// PPI : 326ppi (Retina)
+
+/* iPhone 6 Plus */
+// Height : 1920px (Device Pixels)
+// Width : 1080px (Device Pixels)
+// PPI : 401ppi (Retina Plus)

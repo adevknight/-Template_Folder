@@ -1,0 +1,53 @@
+{
+  "heading": "When are My Savings Realized?",
+  "dataset": [
+    {
+      "name": "Realized Savings",
+      "color": "#8BC7B1",
+      "values": [
+        {"year": 2015, "quarter": 1, "value": 400},
+        {"year": 2015, "quarter": 2, "value": 500},
+        {"year": 2015, "quarter": 3, "value": 700},
+        {"year": 2015, "quarter": 4, "value": 450},
+        {"year": 2016, "quarter": 1, "value": 1200},
+        {"year": 2016, "quarter": 2, "value": 999}
+      ]
+    },
+    {
+      "name": "Contracted Savings",
+      "color": "#E69798",
+      "values": [
+        {"year": 2015, "quarter": 1, "value": 500},
+        {"year": 2015, "quarter": 2, "value": 700},
+        {"year": 2015, "quarter": 3, "value": 850},
+        {"year": 2015, "quarter": 4, "value": 1100},
+        {"year": 2016, "quarter": 1, "value": 1400},
+        {"year": 2016, "quarter": 2, "value": 666}
+      ]
+    },
+    {
+      "name": "Target Savings",
+      "color": "#F89720",
+      "values": [
+        {"year": 2015, "quarter": 1, "value": 300},
+        {"year": 2015, "quarter": 2, "value": 800},
+        {"year": 2015, "quarter": 3, "value": 950},
+        {"year": 2015, "quarter": 4, "value": 1300},
+        {"year": 2016, "quarter": 1, "value": 400},
+        {"year": 2016, "quarter": 2, "value": 900}
+      ]
+    },
+    {
+      "name": "Another New",
+      "color": "#404fdc",
+      "values": [
+        {"year": 2015, "quarter": 1, "value": 1600},
+        {"year": 2015, "quarter": 2, "value": 800},
+        {"year": 2015, "quarter": 3, "value": 350},
+        {"year": 2015, "quarter": 4, "value": 700},
+        {"year": 2016, "quarter": 1, "value": 1800},
+        {"year": 2016, "quarter": 2, "value": 1300}
+      ]
+    }
+  ]
+}

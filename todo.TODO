@@ -1,0 +1,93 @@
+Important Shortcut:
+  Create New Task  --- ✄ -----------------------> Ctrl + I
+  Done/Undone      --- ✄ -----------------------> Ctrl + D
+  Cancel/Activate  --- ✄ -----------------------> Alt + C
+  Writing File Ref --- ✄ -----------------------> .\filename.html:10
+  Opening File Ref --- ✄ -----------------------> Alt + O   
+  Tagging          --- ✄ -----------------------> @tagName
+
+INIT:
+  ☐ RUN "init1.bat".
+  ☐ EDIT "config.rb" to be like "_config.rb".
+  ☐ REMOVE "/stylesheets" folder.
+  ☐ REMOVE unused ".scss" in "/sass" folder. 
+  ☐ EDIT "package.json" in "name", "version", "homepage", and "author" properties, LEAVE "devDependencies" property blank.
+  ☐ EDIT "Gruntfile.js" in "browser" options.
+  ☐ RUN "init2.bat".
+  ☐ List of All Fonts Using PS Script in First Screen.
+    ☐ Font1
+    ☐ Font2
+  ☐ EDIT "/sass/0/_variable-typography.scss".
+  ☐ DOWNLOAD Required CSS or JavaScript Frameworks and Libraries.
+  ☐ OPTIONAL - RUN $ bower install bootstrap.
+  ☐ OPTIONAL - RUN $ bower install angular.
+  ☐ OPTIONAL - RUN $ bower install jquery-ui.
+  ☐ RUN cmd --> cd "path/to/project"
+  ☐ RUN cmd at project folder --> compass watch - FIRST.
+  ☐ RUN cmd at project folder --> grunt watch - SECOND.
+  ☐ EDIT "/sass/non-prefixed-styles.scss" header.
+  ☐ EDIT "/js/script.js" header.
+  ☐ Live Coding.
+    ☐ Run "LiveReloadReread - "http://livereload.com/extensions/".
+
+Screen 01 (###) Reqs:
+  ☐ Provided Source (PSD) is on Portrait
+  ☐ If device screen is on Portrait --> Bg Image do not replicate.
+  ☐ If device screen is on Portrait --> Bg Image width = Screen width.
+  ☐ If device screen is on Portrait --> Bg Image height = Screen height.
+  ☐ If device screen is on Landscape --> Bg Image do not replicate.
+  ☐ If device screen is on Landscape --> Bg Image width = Screen width.
+  ☐ If device screen is on Landscape --> Bg Image height = cropped.
+
+Screen 02 (###) Reqs:
+  ☐
+  ☐
+  
+Q & A:
+  ☐ 
+  ☐ 
+
+PSD:
+  ☐ 
+  ☐ 
+
+HTML: 
+  ☐ 
+  ☐ 
+
+CSS:
+  ☐ 
+  ☐ 
+
+CSS Sprite Initial Creation (After Method):
+  ☐ Ignore It First – Just create HTML, CSS, and JavaScript with background property set to individual icon or image (not sprite icons).
+  ☐ Run Sprite Generating Tool.
+  ☐ Comment the individual icon background property.
+  ☐ Copy-Paste New Sprite CSS Styles.
+
+CSS Sprite Editing Sprite (After Method):
+  ☐ Comment the sprite background property.
+  ☐ Uncomment the individual icon background property.
+  ☐ Re-Run Sprite Generating Tool.
+  ☐ Comment the individual icon background property.
+
+JavaScript:
+  ☐ 
+  ☐
+
+Validation:
+  ☐ 
+  ☐ 
+
+END:
+  ☐ REMOVE unnecessary ".scss".
+  ☐ EDIT and CLEAN "non-prefixed-styles.scss".
+  ☐ COPY entire project folder to "Projects" Folder.
+  ☐ Change to new copied folder.
+  ☐ REMOVE "init1.bat" and "init2.bat".
+  ☐ OPTIONAL - REMOVE "package.json" and "Gruntfile.js".
+  ☐ OPTIONAL - REMOVE "/_reference-notes", "/node_modules" and "/.sass-cache".
+  ☐ OPTIONAL - REMOVE ".bowerrc".
+  ☐ REMOVE "/.idea"
+  ☐ COMPRESS it.
+  ☐ SUBMIT it.

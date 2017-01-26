@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/chart.css" rel="stylesheet" type="text/css">
+    <!--Begin Jquery Library -->
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/barChart.js"></script>
+    <script type="text/javascript" src="js/doublesideBarChart.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Deloitte</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li class="opportunities-li">
+              <a href="javascript:;" class="active">
+                <span class="opportn-icon icons left"></span>
+                <span class="left">Opportunities</span>
+                <span class="yellow-arrow left"></span>
+                <i></i>
+                <div class="clearfix"></div>
+              </a>
+              <!-- opportunities inner nav -->
+              <ul class="opportun-inner-nav">
+                <li>
+                  <a href="01-SPAN.html">Span_01</a>
+                </li>
+                <li>
+                  <a href="02-SPAN.html">Span_02</a>
+                </li>
+                <li>
+                  <a href="03-SPAN.html">Span_03</a>
+                </li>
+                <li>
+                  <a href="04-SPAN.html">Span_04</a>
+                </li>
+                <li>
+                  <a href="05-SPAN.html">Span_05</a>
+                </li>
+                <li>
+                  <a href="06-SPAN.html">Span_06</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="strategic-icon icons left"></span>
+                <span class="left">Strategic</span>
+                <span class="yellow-arrow left"></span>
+                <i></i>
+                <div class="clearfix"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="span-control-by-layer-wrapper"></div>
+            <div class="span-control-by-division-wrapper"></div>
+            <div class="count-manager-aside-wrapper"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Opportunities <span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">SoC Views for Slides</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Analysis details -->
+          <div class="analysis-details-main">
+            <div class="analysis-state-head">
+              <h3><span class="current-state-icon icons left"></span>SoC Views for Slides</h3>
+            </div>
+            <div class="row row-left">
+              <!-- Span of Control by Layer -->
+              <div class="analysis-layer-box">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Span of Control by Layer</h4>
+                </div>
+                <div class="row spanof-layer-main">
+                  <div class="col-md-6">
+                    <!-- Graph View -->
+                    <div class="layer-box-content spanof-graph-layer">
+                      <div class="layer-graph-box double-bar-chart">
+                        <!-- Division layer chart -->
+                        <div class="managethree-layer-chart">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- table-view- -->
+                    <div class="division-table-main spanof-table-layer">
+                      <table class="main-table-view division-table-view">
+                        <thead>
+                          <tr>
+                            <th>
+                              # of Managers
+                            </th>
+                            <th>
+                              IC Count
+                            </th>
+                            <th>
+                              # of Direct Report
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              Layer 1
+                            </td>
+                            <td>
+                              12
+                            </td>
+                            <td>
+                              1
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 2
+                            </td>
+                            <td>
+                              61
+                            </td>
+                            <td>
+                              16
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 3
+                            </td>
+                            <td>
+                              241
+                            </td>
+                            <td>
+                              133
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 4
+                            </td>
+                            <td>
+                              429
+                            </td>
+                            <td>
+                              740
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 5
+                            </td>
+                            <td>
+                              373
+                            </td>
+                            <td>
+                              1,927
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 6
+                            </td>
+                            <td>
+                              126
+                            </td>
+                            <td>
+                              2,117
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 7
+                            </td>
+                            <td>
+                              23
+                            </td>
+                            <td>
+                              657
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Layer 8
+                            </td>
+                            <td>
+                              7
+                            </td>
+                            <td>
+                              90
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              7
+                            </td>
+                            <td>
+                              0
+                            </td>
+                            <td>
+                              26
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              0
+                            </td>
+                            <td>
+                              0
+                            </td>
+                            <td>
+                              26
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              1,273
+                            </td>
+                            <td>
+                              1,273
+                            </td>
+                            <td>
+                              5,707
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Span of Control by Division -->
+              <div class="analysis-layer-box">
+                <div class="layer-box-head">
+                  <span class="green-up-icon icons left"></span>
+                  <h4>Span of Control by Division</h4>
+                </div>
+                <div class="row spanof-control-layer-main">
+                  <div class="col-md-6">
+                    <!-- Graph View -->
+                    <div class="layer-box-content division-select-layer spanof-control-graph-layer">
+                      <div class="layer-graph-box double-bar-chart">
+                        <!-- Division layer chart -->
+                        <div class="divisionthree-layer-chart">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- table-view- -->
+                    <div class="division-table-main spanof-control-table-layer">
+                      <table class="main-table-view">
+                        <thead>
+                          <tr>
+                            <th>
+
+                            </th>
+                            <th>
+                              # of Mgrs
+                            </th>
+                            <th>
+                              IC Count
+                            </th>
+                            <th>
+                              # of Direct Report
+                            </th>
+                            <th>
+                              Count of Employee
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Satish Ma..
+                            </td>
+                            <td>
+                              431
+                            </td>
+                            <td>
+                              2,096
+                            </td>
+                            <td>
+                              2,526
+                            </td>
+                            <td>
+                              2,527
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Grand Tot
+                            </td>
+                            <td>
+                              1,273
+                            </td>
+                            <td>
+                              5,707
+                            </td>
+                            <td>
+                              6,966
+                            </td>
+                            <td>
+                              6,978
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Count of Managing Relationships -->
+              <div class="row row-left">
+                <div class="analysis-layer-box manage-relationship">
+                  <div class="layer-box-head">
+                    <span class="green-up-icon icons left"></span>
+                    <h4>Count of Managing Relationships</h4>
+                    <div class="table-graph-view right">
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="graph-view-icon icons active"></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="table-view-icon icons"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="manage-relationship-graph all-chart-data">
+                    <div class="layer-graph-box">
+                      <div class = "bar-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

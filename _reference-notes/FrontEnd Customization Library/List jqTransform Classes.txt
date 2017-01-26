@@ -1,0 +1,44 @@
+form.jqTransformdone label {}
+form.jqTransformdone div.rowElem {}
+
+/* Buttons */
+button.jqTransformButton {}
+button.jqTransformButton span {}
+button.jqTransformButton span span {}
+
+button.jqTransformButton_hover span {}
+button.jqTransformButton_hover span span {}
+
+button.jqTransformButton_click span {}
+button.jqTransformButton_click span span {}
+
+/* Inputs */
+.jqTransformInputWrapper {}
+.jqTransformInputInner {}
+.jqTransformInputInner div {}
+.jqTransformInputInner div input {}
+
+.jqTransformInputWrapper_hover {}
+.jqTransformInputWrapper_hover div.jqTransformInputInner {}
+
+.jqTransformInputWrapper_focus {}
+.jqTransformInputWrapper_focus div.jqTransformInputInner {}
+
+.jqTransformSafari .jqTransformInputInner div {}
+.jqTransformSafari .jqTransformInputInner div input {}
+
+/* Radio */
+.jqTransformRadioWrapper {}
+.jqTransformRadioWrapper:focus {}
+.jqTransformRadioWrapper:active {}
+.jqTransformRadioWrapper .jqTransformChecked {}
+.jqTransformRadio {}
+.jqTransformRadio:focus {}
+.jqTransformRadio:active {}
+
+/* Checkboxes */
+span.jqTransformCheckboxWrapper {}
+a.jqTransformCheckbox {}
+a.jqTransformCheckbox:hover {}
+a.jqTransformCheckbox.jqTransformChecked {}
+a.jqTransformCheckbox.jqTransformChecked:hover {}

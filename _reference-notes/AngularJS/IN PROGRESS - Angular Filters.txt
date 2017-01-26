@@ -1,0 +1,491 @@
+Definition
+  Filters are used to format data (just format, not altering it) BEFORE it is processed by the directive to be then displayed on view.
+
+Below is built-in filters for SINGLE VALUE: 
+  1. currecy 
+  2. date 
+  3. json - not much in use
+  4. number 
+  5. uppercase 
+  6. lowercase 
+
+
+currency ===============================================================================================================
+
+  <span>{{ product.price | currency }}</span> // $2.43
+  // or
+  <span>{{ product.price | currency:"€ " }}</span> // € 2.43
+  
+  // while
+  <script>
+    var x = {
+      "name" : "Orange Juice",
+      "price" : 2.43,
+      "origin" : "Indonesia",
+      "expiredInDays" : 69
+    };
+    var app = angular.module("myApp", []);
+
+    app.controller("MainCtrl", function($scope){
+      $scope.product = x;
+    });
+  </script>
+
+
+date ===================================================================================================================
+
+  <span>{{ getExpiryDate(product.expiredInDays) | date:"dd MMM yyyy" }}</span>
+
+  // while
+  <script>
+    ...
+
+    app.controller("MainCtrl", function($scope){
+      $scope.product = x;
+      $scope.getExpiryDate = function(noOfDays) {
+        var currentTime = new Date();
+        return currentTime.setDate(currentTime.getDate() + noOfDays);
+      };
+    });
+  </script>
+
+  // CONFIGURATION OPTIONS for date filter:
+  yyyy --> 2016
+  yy --> 16
+  MMMM --> January
+  MMM --> Jan
+  MM --> 01
+  M --> 1
+  dd --> 20
+  d --> 5
+  EEEE --> Tuesday
+  EEE --> Tue
+  
+  HH --> 03 (24-hour mode with two characters )
+  H --> 2 (24-hour mode with one character)
+  hh --> 05 (12-hour mode with two characters)
+  h --> 5 (12-hour mode with one character)
+  mm --> 01 (minutes with two characters)
+  m --> 1 (minutes with one character)
+  ss --> 09 (seconds with two characters)
+  s --> 9 (seconds with one character)
+
+  medium --> Dec 21, 2016 12:54:22 PM
+  short --> 12/21/16 12:54 PM
+  fullDate --> Monday, December 21, 2016
+  longDate --> December 21, 2016
+  mediumDate --> Dec 21, 2016
+  shortDate --> 12/21/16
+  mediumTime --> 12:58:30 PM
+  shortTime --> 12:59 PM
+
+  a --> AM or PM
+  Z --> Time Zone (in Four Characters like: +0800)
+
+
+json ===================================================================================================================
+
+  // Filter to create JSON String from a JavaScript Object
+
+  <span>{{ {'somethingA':'somethingB'} | json }}</span> // 1st
+  <span>{{ {'somethingA':'somethingB'} | json:6 }}</span> // 2nd
+
+  // while
+  <script>
+    var app = angular.module("myApp", []);
+  </script>
+
+  // will render
+  // 1st - Space set to default (equal to 2)
+  {
+    "somethingA": "somethingB"
+  }
+
+  // 2nd - Space set to 6
+  {
+        "somethingA": "somethingB"
+  }
+
+
+number =================================================================================================================
+
+  <div ng-controller="MainCtrl">
+    <label>Enter number: <input ng-model='val'></label>
+    <br>
+    <p>Default formatting: <span>{{ val | number }}</span></p> // 1,234.568
+    <br>
+    <p>No fractions: <span>{{ val | number:0 }}</span></p> // 1,234
+    <br>
+    <p>Negative number: <span>{{ -val | number:2 }}</span></p> // -1,234.57
+  </div>
+  
+  // while
+  <script>
+    ...
+    
+    app.controller('MainCtrl', function($scope) {
+      $scope.val = 1234.56789; // Pre-Setting
+    });
+  </script>
+
+
+uppercase & lowercase ==================================================================================================
+
+  // Pretty straight forward.
+  // There are NO CONFIGURATION OPTIONS for these filters.
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Below is built-in filters for COLLECTION OF VALUES: 
+  1. limitTo
+  2. filter 
+  3. orderBy - Most Complex
+
+
+limitTo ================================================================================================================
+
+  // Purpose: to restrict number of items taken from an ARRAY OF DATA OBJECTS, or JUST PLAIN ARRAY.
+
+  // Syntax:
+  {{ somethingToLimit| limitTo:a:b }} or ng-...="somethingToLimit | limitTo:a:b"
+
+  - somethingToLimit          = Will be an array of objects, or just plain array.
+  - a                         = How many item in array to display, can be in the form of negative number.
+  - b* (New in Angular 1.4)   = Starting point (an index number), if omitted then b=0 (default value),
+                                can be in the form of negative number.
+    * means it can be ignored or not explicitly typed.
+
+  // Implementation:
+  <div>
+    Limit to
+    <select ng-model=limitVal ng-options="item for item in limitRange"></select>
+  </div>
+  <div ng-repeat="item in product | limitTo:limitVal">{{ item.name }}</div>
+
+  // while
+  <script>
+    var x = [
+      {"name" : "Apples", "category" : "Fruit", "price" : 10},
+      {"name" : "Bananas", "category" : "Fruit", "price" : 9.15},
+      {"name" : "Watermelon", "category" : "Fruit", "price" : 6.54},
+
+      {"name" : "Tuna", "category" : "Fish", "price" : 3.65},
+      {"name" : "Salmon", "category" : "Fish", "price" : 2.58},
+      {"name" : "Trout", "category" : "Fish", "price" : 4.87},
+
+      {"name" : "Beer", "category" : "Drinks", "price" : 2.99},
+      {"name" : "Wine", "category" : "Drinks", "price" : 8.52},
+      {"name" : "Whiskey", "category" : "Drinks", "price" : 45.55}
+    ];
+    var app = angular.module("myApp", []);
+
+    app.controller("MainCtrl", function($scope){
+      $scope.product = x;
+      $scope.limitVal = "6"; // default value
+      $scope.limitRange = [];
+      var productLength = $scope.product.length;
+      for (i=1; i<=productLength; i++) {
+        $scope.limitRange.push(i.toString());
+      }
+    });
+  </script>
+
+  // Notes
+  If you put negative value, for example -5, as limitVal or a variable, then it will select 5 last elements of the array.
+
+
+filter ================================================================================================================= 
+
+  // Purpose: to select objects from AN ARRAY OF OBJECTS using EITHER STRING, MAP OBJECT, or using a FUNCTION.
+
+  // Syntax:
+  {{ somethingToFilter | filter:a:b:c }} or ng-...="something | filter:a:b:c"
+
+  - somethingToFilter         = Will be an array of objects, or just plain array.
+  - a                         = EXPRESSION, the arguments to be used for selecting items from the 'somethingToFilter'.
+                                There are 3 types of expression can be used (choose one):
+                                - String
+                                - Map Object
+                                - Function
+  - b*                        = COMPARATOR, defines HOW STRICT the comparison should be. The value can be (choose one):
+                                - true, STRICT (means CASE SENSITIVE, and VALUE SENSITIVE).
+                                - false (default value, or if b omitted then b=false), NOT STRICT (means CASE INSENSITIVE).
+                                - Function, SEE DOCUMENTATION (RARELY USED).
+  - c*                        = AnyPropertyKey, SEE DOCUMENTATION (RARELY USED).
+    * means it can be ignored or not explicitly typed.
+  
+  // Implementation using STRING
+     -  It will search to all of the object's properties inside the array and will return the objects that has the specified
+        string in any of its properties.
+     -  Use ! to negate the expression, i.e {{ ... | filter:'!na'}} meaning return object that DOES NOT HAVE 'na' keyword in
+        any of its properties.
+    
+    ...
+    <tr ng-repeat="x in product | filter:'na'}">
+      <td>{{ x.name }}</td>
+      <td>{{ x.price }}</td>
+    </tr>
+    ...
+    Will display:
+          Bananas     9.15
+          Tuna        3.65
+
+  // Implementation using MAP OBJECT
+     -  IF {name:"M", phone:"1"} THEN IT WILL RETURN the items (from an array) that have  property 'name' contain "M"
+        AND (BIG AND) also have property 'phone' that contain '1'.
+     -  IF {$: "na"} THEN IT WILL RETURN the items (from an array) that have 'na' on one of the object's many properties,
+        it can be from any property, it can be from main/direct object's property or it's child object (nested object). This is
+        equivalent of using 'string' as 'a' variable, (i.e {{ ... | filter:'na' }}).
+     -  Use ! to negate the expression, i.e {{ ... | filter:{category: '!Fruit'} }} meaning return object that DOES NOT
+        HAVE 'Fruit' keyword in of its 'category' property.
+    
+    Example 1 - Simple
+    ...
+    <tr ng-repeat="x in product | filter:{category: 'Fruit'}">
+      <td>{{ x.name }}</td>
+      <td>{{ x.price }}</td>
+    </tr>
+    ...
+    Will display:
+          Apples      10
+          Bananas     9.15
+          Watermelon  6.54
+
+    Example 2 - More Complex
+    ...
+    <label>Any: <input ng-model="search.$"></label>
+    <br>
+    <label>Name only: <input ng-model="search.name"></label>
+    <br>
+    <label>Phone only: <input ng-model="search.phone"></label>
+    <br>
+    <label>Equality <input type="checkbox" ng-model="strict"></label>
+    <br>
+    <table id="searchObjResults">
+      <tr><th>Name</th><th>Phone</th></tr>
+      <tr ng-repeat="friendObj in friends | filter:search:strict">
+        <td>{{friendObj.name}}</td>
+        <td>{{friendObj.phone}}</td>
+      </tr>
+    </table>
+    ...
+
+    <script>
+      var x = [
+        {name:'John', phone:'555-1276'},
+        {name:'Mary', phone:'800-BIG-MARY'},
+        {name:'Mike', phone:'555-4321'},
+        {name:'Adam', phone:'555-5678'},
+        {name:'Julie', phone:'555-8765'},
+        {name:'Juliette', phone:'555-5678'}
+      ];
+      var app = angular.module("myApp", []);
+
+      app.controller("MainCtrl", function($scope){
+        $scope.friends = x;
+      });
+    </script>
+
+  // Implementation using FUNCTION
+  function(value, index, array): A predicate function can be used to write arbitrary filters.
+  The function is called for each element of the array, with the element, its index, and the entire array itself as arguments.
+
+  The final result is an array of those elements that the predicate returned true for.
+  
+
+  ...
+  <tr ng-repeat="x in product | filter:someFunc">
+    <td>{{ x.name }}</td>
+    <td>{{ x.price }}</td>
+  </tr>
+  ...
+
+  <script>
+    var x = [
+      {"name" : "Apples", "category" : "Fruit", "price" : 10},
+      {"name" : "Bananas", "category" : "Fruit", "price" : 9.15},
+      {"name" : "Watermelon", "category" : "Fruit", "price" : 6.54},
+
+      {"name" : "Tuna", "category" : "Fish", "price" : 3.65},
+      {"name" : "Salmon", "category" : "Fish", "price" : 2.58},
+      {"name" : "Trout", "category" : "Fish", "price" : 4.87},
+
+      {"name" : "Beer", "category" : "Drinks", "price" : 2.99},
+      {"name" : "Wine", "category" : "Drinks", "price" : 8.52},
+      {"name" : "Whiskey", "category" : "Drinks", "price" : 45.55}
+    ];
+    var app = angular.module("myApp", []);
+
+    app.controller("MainCtrl", function($scope){
+      ...
+      $scope.someFunc = function(item) {
+        return (item.category == "Fruit" || item.name == "Wine"); // return value will be boolean 'true' or 'false'
+      };
+      // 'item' parameter will refer to 'x' in the ng-repeat directive (it happen automatically, so you dont need to pass it manually)
+    });
+  </script>
+
+
+orderBy ================================================================================================================
+
+  // Purpose: to sort the objects in an array.
+
+  // using OBJECT's PROPERTY
+  ...
+  <tr ng-repeat="x in product | orderBy:'price'}">
+    <td>{{ x.name }}</td>
+    <td>{{ x.price }}</td>
+  </tr>
+  ...
+  
+  The sorted results are:
+  Salmon      2.58
+  Beer        2.99
+  Tuna        3.65
+  Trout       4.87
+  Watermelon  6.54
+  Wine        8.52
+  Bananas     9.15
+  Apples      10
+  Whiskey     45.55
+
+  By default 'orderBy' will sort and order the objects in ascending way,
+  if you want to sort and order in descending way, then you do following
+
+  ...
+  <tr ng-repeat="x in product | orderBy:'-price'}">
+    <td>{{ x.name }}</td>
+    <td>{{ x.price }}</td>
+  </tr>
+  ...
+
+  // using FUNCTION
+  ...
+  <tr ng-repeat="x in product | orderBy:custSort">
+    <td>{{ x.name }}</td>
+    <td>{{ x.price }}</td>
+  </tr>
+  ...
+
+  <script>
+    var x = [
+      {"name" : "Apples", "category" : "Fruit", "price" : 10},
+      {"name" : "Bananas", "category" : "Fruit", "price" : 9.15},
+      {"name" : "Watermelon", "category" : "Fruit", "price" : 6.54},
+
+      {"name" : "Tuna", "category" : "Fish", "price" : 3.65},
+      {"name" : "Salmon", "category" : "Fish", "price" : 2.58},
+      {"name" : "Trout", "category" : "Fish", "price" : 4.87},
+
+      {"name" : "Beer", "category" : "Drinks", "price" : 2.99},
+      {"name" : "Wine", "category" : "Drinks", "price" : 8.52},
+      {"name" : "Whiskey", "category" : "Drinks", "price" : 45.55}
+    ];
+    var app = angular.module("myApp", []);
+
+    app.controller("MainCtrl", function($scope){
+      ...
+      $scope.custSort = function(item) {
+        return item.price < 5 ? 0 : item.name; // ternary operation, means if 'price' < 5 then return 0 (don't sort it), else sort it by 'name'
+      };
+      // 'item' parameter will refer to 'x' in the ng-repeat directive (it happen automatically, so you dont need to pass it manually)
+    });
+  </script>
+
+  The sorted results are:
+  Tuna        3.65
+  Salmon      2.58
+  Trout       4.87
+  Beer        2.99
+  Apples      10
+  Bananas     9.15
+  Watermelon  6.54
+  Whiskey     45.55
+  Wine        8.52
+
+  // using FUNCTION AND OBJECT's PROPERTY (Combination of Both - MULTIPLE PREDICATES)
+  ...
+  <tr ng-repeat="x in product | orderBy:[custSort, '-price']">
+    <td>{{ x.name }}</td>
+    <td>{{ x.price }}</td>
+  </tr>
+  ...
+
+  The sorted results are:
+  Trout       4.87    -- sorted by -price (descending) since its return value from custSort is same
+  Tuna        3.65    -- sorted by -price (descending) since its return value from custSort is same
+  Beer        2.99    -- sorted by -price (descending) since its return value from custSort is same
+  Salmon      2.58    -- sorted by -price (descending) since its return value from custSort is same
+  Apples      10      -- no change
+  Bananas     9.15    -- no change
+  Watermelon  6.54    -- no change
+  Whiskey     45.55   -- no change
+  Wine        8.52    -- no change
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Custom Filter ==========================================================================================================
+
+  // Custom Filter for SINGLE VALUE
+  ...
+  <tr ng-repeat="x in product">
+    <td>{{ x.name | labelCase }}</td>
+    <td>{{ x.category | labelCase:true }}</td>
+  </tr>
+  ...
+
+  <script>
+    var x = [
+      {"name" : "Apples", "category" : "Fruit", "price" : 10},
+      {"name" : "Bananas", "category" : "Fruit", "price" : 9.15},
+      {"name" : "Watermelon", "category" : "Fruit", "price" : 6.54},
+
+      {"name" : "Tuna", "category" : "Fish", "price" : 3.65},
+      {"name" : "Salmon", "category" : "Fish", "price" : 2.58},
+      {"name" : "Trout", "category" : "Fish", "price" : 4.87},
+
+      {"name" : "Beer", "category" : "Drinks", "price" : 2.99},
+      {"name" : "Wine", "category" : "Drinks", "price" : 8.52},
+      {"name" : "Whiskey", "category" : "Drinks", "price" : 45.55}
+    ];
+    var app = angular.module("myApp", []);
+
+    app.controller("MainCtrl", function($scope){
+      $scope.product = x;
+    });
+
+    app.filter("labelCase", function() {
+      return function(value, isReversed) {
+        if (angular.isString(value)) {
+          var int = (isReversed) ? value.toUpperCase() : value.toLowerCase();
+          var firstChar = (isReversed) ? int[0].toLowerCase() : int[0].toUpperCase();
+          return firstChar + int.substr(1);
+        } else {
+          return value; // do nothing
+        }
+      };
+    });
+  </script>
+
+  The filtered result is:
+  Apples      fRUIT
+  Bananas     fRUIT
+  Watermelon  fRUIT
+  Tuna        fISH
+  Salmon      fISH
+  Trout       fISH
+  Beer        dRINKS
+  Wine        dRINKS
+  Whiskey     dRINKS
+
+  // Custom Filter for COLLECTION OF VALUES
+  ...
+

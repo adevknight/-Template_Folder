@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/dd.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.custom-scrollbar.css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <!--Begin Jquery Library -->
+    <!-- /lib -->
+    <script type="text/javascript" src="js/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.custom-scrollbar.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.dd.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="js/lib/iCheck.js"></script>
+
+    <!-- /d3 -->
+    <script type="text/javascript" src="js/d3/CATEGORY_SOURCING/sourcing-results-chart.js"></script>
+    
+    
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/resizeD3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Pixel</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="EXECUTIVE_VIEW.html">
+                <span class="exec-icon icons left"></span>
+                <span>Executive</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="SPEND_ANALYSIS.html">
+                <span class="spend-icon icons left"></span>
+                <span>Spend</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="CATEGORY_SOURCING.html" class="active">
+                <span class="source-icon icons left"></span>
+                <span>Sourcing</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="project-icon icons left"></span>
+                <span>Project</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="BENEFITS_TRACKING.html">
+                <span class="benefits-icon icons left"></span>
+                <span>Benefits</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="contract-icon icons left"></span>
+                <span>Contract</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="risk-icon icons left"></span>
+                <span>Risk</span>
+                <i></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="filter-sourcing-results"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Home<span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">Category Sourcing</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Spend Analytics -->
+          <div class="row">
+            <div class="content-container">
+              <div class="category-source-main">
+                <div class="pages-sub-header row-bottom-exec row-left">
+                  <div class="pages-heading-box">
+                    <h4 class="left"><span class="category-resorce-icon icons left"></span>Category Sourcing</h4>
+                    <p class="receipt-date-txt right">
+                      Receipt Date: 1/1/2014 - 4/30/2015
+                    </p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="row-left supplier-analysis-main">
+                  <div class="row">
+                    <!-- Supplier Analysis -->
+                    <div class="widget-layer-box row-bottom-exec row-left">
+                      <div class="layer-box-head">
+                        <span class="green-up-icon icons left"></span>
+                        <h4 class="left">Supplier Analysis</h4>
+                        <div class="right">
+                          <div class="supplier-details-slider right">
+                            <p class="left top-projec-txt">
+                              Top Projects
+                            </p>
+                            <div class="supplier-uislider-box left js-uislider">
+                              <!-- Top projects -->
+                              <div class="js-top-projects-slider">
+                              </div>
+                            </div>
+                            <input type="text" class="supplier-det-slider-no js-proj-val">
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="supplier-anaylsis-table two-wid-box">
+                        <div class="supplier-ana-legend right">
+                          <ul>
+                            <li>
+                              <i class="left blue"></i>
+                              <span class="left">Top 25% of Supplier</span>
+                            </li>
+                            <li>
+                              <i class="left orange"></i>
+                              <span class="left">Top 50% of Supplier</span>
+                            </li>
+                            <li>
+                              <i class="left red"></i>
+                              <span class="left">Bottom 25% of Supplier</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- spend Details table -->
+                        <div class="supplier-details-table sort-table">
+                          <table class="main-table-view supplier-analysis-table">
+                            <thead>
+                              <tr>
+                                <th><span class="tab-col">Supplier<br> Name<span class="yellow-arrow"></span></span></th>
+                                <th><span class="tab-col">Incumbent<br> SKUs<span class="yellow-arrow"></span></span></th>
+                                <th><span class="tab-col">SKU<br> Coverage<span class="yellow-arrow"></span></span></th>
+                                <th><span class="tab-col">Best Price<br> SKUs<span class="yellow-arrow"></span></span></th>
+                                <th><span class="tab-col">Security<br> of Supply</span></th>
+                                <th><span class="tab-col">Financial<br> Health</span></th>
+                                <th><span class="tab-col">Historical<br> Performance</span></th>
+                                <th><span class="tab-col">Attribute<br> 4</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>aSupplier _1</td>
+                                <td>acXX</td>
+                                <td>aXXXX</td>
+                                <td>aXX</td>
+                                <td><span class="color-bar red"></span></td>
+                                <td><span class="color-bar orange"></span></td>
+                                <td>aNo Incumbent Data</td>
+                                <td><span class="color-bar blue"></span></td>
+                              </tr>
+                              <tr>
+                                <td>bSupplier _2</td>
+                                <td>bfXX</td>
+                                <td>bXXXX</td>
+                                <td>bXX</td>
+                                <td><span class="color-bar blue"></span></td>
+                                <td><span class="color-bar red"></span></td>
+                                <td>bNo Incumbent Data</td>
+                                <td><span class="color-bar orange"></span></td>
+                              </tr>
+                              <tr>
+                                <td>cSupplier _3</td>
+                                <td>cXX</td>
+                                <td>cXXXX</td>
+                                <td>cXX</td>
+                                <td><span class="color-bar orange"></span></td>
+                                <td><span class="color-bar red"></span></td>
+                                <td><span class="color-bar blue"></span></td>
+                                <td><span class="color-bar blue"></span></td>
+                              </tr>
+                              <tr>
+                                <td>Supplier _4</td>
+                                <td>XX</td>
+                                <td>XXXX</td>
+                                <td>XX</td>
+                                <td><span class="color-bar orange"></span></td>
+                                <td><span class="color-bar blue"></span></td>
+                                <td><span class="color-bar red"></span></td>
+                                <td><span class="color-bar blue"></span></td>
+                              </tr>
+                              <tr>
+                                <td>Supplier _5</td>
+                                <td>XX</td>
+                                <td>XXXX</td>
+                                <td>XX</td>
+                                <td><span class="color-bar blue"></span></td>
+                                <td><span class="color-bar red"></span></td>
+                                <td>No Incumbent Data</td>
+                                <td><span class="color-bar orange"></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Source Results and E-Source -->
+                    <div class="row-left">
+                      <div class="source-esource-main">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="widget-layer-box frst-wid-layer">
+                              <div class="layer-box-head without-top-arw">
+                                <h4>Sourcing Results</h4>
+                              </div>
+                              <!-- sourcing chart -->
+                              <div class="sourcing-results-chart">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="secnd-wid-layer">
+                              <div class="esoruce-box">
+                                <div class="esource-bg">
+                                  <p>
+                                    E-Sourcing Access
+                                  </p>
+                                  <a href="javascript:;" class="esource-tool-btn">
+                                    <span class="toolbtn-inner">
+                                      <i class="left icons"></i>
+                                      <span class="left">E-SOURCING TOOL ACCESS</span>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

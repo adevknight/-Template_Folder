@@ -1,0 +1,270 @@
+/*bar chart styles*/
+svg text {
+  font-family: 'Open Sans';
+}
+.bar-chart-svg .y.axis .domain {
+  stroke: transparent;
+}
+.bar-chart-svg .x.axis .tick line,.x.axis .domain {
+  stroke: transparent;
+}
+.bar-chart-svg .axis path,
+.bar-chart-svg .axis line {
+  fill: none;
+  stroke: #e1e1e1;
+  shape-rendering: crispEdges;
+}
+
+.bar-chart-svg .axis text {
+  font: 10px 'Open Sans';
+  fill: #636363;
+  text-anchor: middle;
+}
+
+.bar-chart-svg .bars text {
+  font: 12px 'Open Sans';
+  text-anchor: middle;
+}
+
+.bar-chart-svg .axis-hint {
+  font: 12px 'Open Sans';
+  fill: #636363;
+}
+.legends-group text {
+  font: 11px 'Open Sans';
+  fill: #636363;
+}
+
+/*waterfall chart css*/
+.waterFallBar .waterfall-bar {
+  fill: #8bc7b1;
+}
+
+.waterFallBar.total .waterfall-bar {
+  fill: #1592a5;
+}
+
+.waterFall-chart-svg .y.axis .domain {
+  stroke: transparent;
+}
+.waterFall-chart-svg .x.axis .tick line,.waterFall-chart-svg .x.axis .domain {
+  stroke: transparent;
+}
+.waterFall-chart-svg .axis text {
+  fill: #636363;
+}
+.waterFall-chart-svg .y.axis .tick line{
+  stroke: #e1e1e1;
+}
+.waterFall-chart-svg .level-tip text {
+  fill: #79ae9a;
+  font-size: 10px;
+}
+.waterFall-chart-svg .total .level-tip text {
+  fill: #1592a5;
+}
+.waterFall-chart-svg .x.axis .tick text,.waterFall-chart-svg .x.axis .tick tspan,.waterFall-chart-svg .axisNoteG text{
+  fill: #636363;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+/*scattPlot chart styles */
+.scattPlot-chart-svg.y.axis .tick line,.scattPlot-chart-svg .scattplot-outer-box line,.scattPlot-chart-svg .dashed-axis line {
+  stroke: #e1e1e1;
+}
+.scattPlot-chart-svg .x.axis .tick line,.scattPlot-chart-svg .x.axis .domain,.scattPlot-chart-svg .y.axis .domain {
+  stroke: transparent;
+}
+.scattPlot-chart-svg .chart-note text {
+  fill: #636363;
+  font-size: 10px;
+}
+.scattPlot-chart-svg .x.axis .tick text,.scattPlot-chart-svg .y.axis .tick text {
+  fill: #636363;
+  font-size: 10px;
+}
+.scattPlot-chart-svg .y.axis .tick line {
+  stroke: #e1e1e1;
+}
+
+
+/*box plot styles*/
+  .box-blot-svg .ratio-box line,
+  .box-blot-svg .ratio-box circle {
+    fill: #b1b1b1;
+    stroke: #959595;
+    stroke-width: 1px;
+  }
+
+  .box-blot-svg .ratio-box .full-rect {
+    fill: #b1b1b1;
+    stroke-width: 1px;
+  }
+  .box-blot-svg .ratio-box .center {
+    stroke: #959595;
+  }
+  .box-blot-svg .ratio-box .outlier {
+    fill: none;
+    stroke: #000;
+  }
+  .box-blot-svg .boxplot-outer-box line{
+    stroke: #e1e1e1;
+  }
+  .box-blot-svg .points-container circle{
+    fill: #1592a5;
+  }
+  .box-blot-svg .dashed-axis line{
+    stroke: #e1e1e1;
+    stroke-dasharray: 8,8;
+  }
+  .box-blot-svg .axis path{
+    stroke: transparent;
+  }
+  .box-blot-svg .axis line{
+    stroke: #e1e1e1;
+  }
+  .box-blot-svg .axis .tick text,.box-blot-svg .chart-note text {
+    font-size: 10px;
+    fill: #636363;
+  }
+  .box-blot-svg .first-rect {
+    fill: #e0e0e0;
+  }
+
+
+
+  /* Manage Layer Chart */
+.manage-layer-chart,.division-layer-chart{
+  margin: -22px -21px -32px;
+}
+.managetwo-layer-chart{
+  margin: -30px -21px -53px;
+}
+.double-bar-chart .axis path.domain,
+.double-bar-chart .axis .tick line,
+.double-bar-chart .zero.axis line,
+.double-bar-chart .topBorder,.double-bar-chart .xLine line {
+  fill: none;
+  stroke: #e1e1e1;
+  shape-rendering: crispEdges;
+}
+.double-bar-chart .axis path.domain{
+  stroke: transparent;
+}
+.double-bar-chart .leftGroup text,.double-bar-chart .rightGroup .barLbl{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+.double-bar-chart .ylbl,.double-bar-chart .ylbl tspan{
+	font-size: 10px;
+}
+.double-bar-chart .bar1,.double-bar-chart .bar2{
+    fill: #8bc7b1;
+}
+.double-bar-chart .axis-hint,.double-bar-chart .axis .tick text,
+svg .ylbl{
+  font: 10px 'Open Sans';
+  fill: #636363;
+}
+
+.heat-soc-chart {
+  margin: 0 -21px;
+}
+.heat-soc-chart .gridGroup text,
+.heat-soc-chart text{
+  font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+.heat-dist-layer-chart,.heat-report-layer-chart{
+  margin: -16px -21px 0;
+}
+.heat-soc-chart .borderLine{
+  fill: none;
+  stroke: #e1e1e1;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+/* Heat map distribution */
+.heat-dist-layer-chart text{
+  font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+  fill: #636363;
+}
+.heat-dist-layer-chart .labl{
+  font-size: 10px;
+}
+.heat-dist-layer-chart .rectBorder{
+  stroke: #fff;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+.heat-report-layer-chart text{
+  font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+  fill: #636363;
+}
+.heat-report-layer-chart .labl{
+  font-size: 10px;
+}
+.heat-report-layer-chart .rectBorder{
+  stroke: #fff;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+/* Heat map span4 */
+.heat-direct-layer-chart{
+  margin: 0 -21px;
+}
+.heat-direct-layer-chart text{
+  font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+  fill: #636363;
+}
+.heat-direct-layer-chart .labl{
+  font-size: 10px;
+}
+.heat-direct-layer-chart .rectBorder{
+  stroke: #fff;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+/* Heat map span  */
+.heat-compensate-layer-chart {
+  margin: -16px -21px 0;
+}
+.heat-compensate-layer-chart text{
+  font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+  fill: #636363;
+}
+.heat-compensate-layer-chart .labl{
+  font-size: 10px;
+}
+.heat-compensate-layer-chart .rectBorder{
+  stroke: #fff;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+.groupCol tspan, .groupRow text,.chart-note text{
+    font-size: 10px;
+    fill: #636363;
+  }
+  .managethree-layer-chart,.divisionthree-layer-chart{
+    margin: -30px -21px -53px;
+  }
+.gridXLine,.gridYLine{
+  stroke: #e1e1e1;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  shape-rendering: crispEdges;
+}
+.layer-graph-box {
+  margin-bottom: -2px;
+}

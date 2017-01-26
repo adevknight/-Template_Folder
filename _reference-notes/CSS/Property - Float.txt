@@ -1,0 +1,29 @@
+> Float
+  If a <div> set it to float:left or float:right, then 
+  
+  ... The <div> BLOCK behaviour will gone. 
+      It start to behave like INLINE-BLOCK element (not INLINE element).
+  
+  ... It 
+        will NOT float on top of "previous (base on HTML structure) BLOCK element",
+        will NOT float on top of "previous (base on HTML structure) INLINE-BLOCK element".
+        will float on top of the "last line of previous (base on HTML structure) INLINE element".
+
+      but it will let
+        "next (base on HTML structure) BLOCK element" and
+        "next (base on HTML structure) INLINE or INLINE-BLOCK element" 
+        to flow/wrap around on its left side if we set the <div> to float:right, or
+        to flow/wrap around on its right side if we set the <div> to float:left,
+        without reducing their width (The <div> just like floating on top of them).
+> Clear
+  IF
+    <div class="float-right">FLOAT RIGHT</div>
+    <div class="text">Lorem...</div>
+  THEN
+    The .text element will wrap around the left side of .float-right, if we do not want this "wrapping" to happen
+    then we add clear:right to .text element so it will move down and not sit beside the .float-right element.
+
+  IN ESSENCE 
+    clear: right = I don't want any "floated" element sit on my right side.
+    clear: left = I don't want any "floated" element sit on my left side.
+    clear: both = I don't want any "floated" element sit on my right and left side.

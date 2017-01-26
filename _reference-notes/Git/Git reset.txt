@@ -1,0 +1,71 @@
+Undo-ing ALREADY COMMITTED changes -------------------------------------------------------------------------------------
+  Let say you are doing something like this
+    -- > git init
+    
+    -- Create a file, 0.txt
+    -- > git add -A
+       > git commit
+    
+    -- > git branch newBranch
+       > git checkout newBranch
+
+    -- Create a file, newBranch1.txt
+    -- > git add -A
+       > git commit
+
+    -- Create a file, newBranch2.txt
+    -- > git add -A
+       > git commit
+
+    -- Create a file, newBranch3.txt
+    -- > git add -A
+       > git commit
+
+  IF you do following (next steps)
+        > git reset HEAD~2
+            It will do
+            1. Working directory still has 0.txt, newBranch1.txt, newBranch2.txt, and newBranch3.txt. All of its content
+               inside those files remain unchanged.
+            2. newBranch2.txt and newBranch3.txt will be considered new changes that are not staged yet
+               nor even committed yet.
+            In other word the command mean just move the HEAD pointer 2 steps back (in the same branch)
+            and start writing from that point.
+            
+            Different modes --soft, --mixed, --hard:
+            > git reset --soft HEAD~2
+              HEAD will move back by 2 steps in same branch.
+              WORKING DIR will stay the same, no files deleted.
+              FILES CREATED ON LAST 2 COMMITS will be on staging index ready to commit.
+            > git reset --mixed HEAD~2
+                --mixed is default mode
+                HEAD will move back by 2 steps in same branch.
+                WORKING DIR will stay the same, no files deleted.
+                FILES CREATED ON LAST 2 COMMITS WILL NOT BE on staging index nor ready to commit.    
+            > git reset --hard HEAD~2
+                HEAD will move back by 2 steps in same branch.
+                WORKING DIR will NOT stay the same, THERE ARE files that are deleted.
+                NO FILES to be added to staging index nor committed.
+            
+            To undo this 'reset HEAD' behaviour:
+            > git reflog // To check all HEAD history/log
+            > git reset 'HEAD@{1}' // To back to the point in HEAD1 reference.
+
+  ELSE, IF you do following (next steps)
+        > git reset HEAD~1
+            or (equal to command below)
+        > git reset HEAD~
+            This will do EXACTLY like 'git reset HEAD~2' above, but instead of taking 2 steps back,
+            it will take 1 step back IN THE SAME BRANCH.
+          
+            To undo this 'reset HEAD' behaviour:
+            > git reflog // To check all HEAD history/log
+            > git reset 'HEAD@{1}' // To back to the point in HEAD1 reference.
+
+
+  ELSE, IF you do following (next steps)
+        > git reset HEAD 
+            // Nothing will happen
+        > git reset
+            // Nothing will happen
+        > git reset .
+            // Nothing will happen

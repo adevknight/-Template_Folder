@@ -1,0 +1,111 @@
+Basic use of D3.js
+
+
+------------------------------------------------------------------------------------------------------------------------
+// A. How they work
+Before:
+  <body>
+    <p>Hello World</p>
+  </body>
+
+Using D3.js:
+  <script>
+    d3.select("body").append("p").text("New Element");
+  </script>
+  
+  Notes:
+  - The argument inside .select() is just like CSS selectors.
+  - .append() will insert element (inside their argument) to the elements selected by .select(),
+    and put it as their last direct children.
+
+After:
+  <body>
+    <p>Hello World</p>
+    <p>New Element</p> <!-- New p tag -->
+  </body>
+
+
+------------------------------------------------------------------------------------------------------------------------
+// B. Using SVG in .append() - Drawing a circle with r=25
+  
+  Step 1 - Draw SVG canvas with width= 50px and height=50px
+  
+    d3.select("body").append("svg").attr("width", 50).attr("height", 50);
+
+  Step 2 - Add circle SVG
+      
+      .append("circle")
+      .attr("cx", 25)
+      .attr("cy", 25)
+      .attr("r", 25)
+      .style("fill", "purple");
+
+  Step 3 (End) - Combine code on Step 1 and Step 2
+     
+     d3.select("body").append("svg").attr("width", 50).attr("height", 50)
+      .append("circle")
+      .attr("cx", 25)
+      .attr("cy", 25)
+      .attr("r", 25)
+      .style("fill", "purple");
+
+
+------------------------------------------------------------------------------------------------------------------------
+// C. Using SVG and external data to visualize the data in BAR chart where the base is on the y-axis
+  
+  Step 1 - Draw SVG canvas with width= 50px and height=50px
+  
+    d3.select("body").append("svg").attr("width", 50).attr("height", 50);
+
+  Step 2 - Add IMAGINARY selection using .selectAll()
+      
+      .selectAll("rect")
+
+    Notes:
+    - See ".selectAll() vs .select().txt"
+
+  step 3 - Enter the data source
+
+      .data(dataSource)
+
+    Notes:
+    - dataSource = [20, 30, 40, 50]
+    - See "Accepted Data Sources.txt"
+
+  Step 4 - .enter()
+      
+      .enter()
+
+    Notes:
+    - The D3js' Data operator (or .data()) returns three virtual selections, .enter(), .update(), and .exit().
+    - .enter() operation only allow three to be chained afterwards, .append(), .insert(), or .select() methods.
+
+  Step 5 - Draw the Rectangle
+          
+        .append("rect")
+        .attr("width", function(eachDataElement) {
+          return eachDataelement;
+        })
+        .attr("height", 50)
+        .attr("y", function(eachDataElement, index) {
+          return index*100;
+        })
+
+    Notes:
+    - eachDataElement (or just d) --> each array element from the dataSource array.
+    - index (or just i) --> the index of each array element from the dataSource array, it always starts from 0.
+
+  STEP 6 (End) - Combine all of them
+    
+    d3.select("body").append("svg").attr("width", 50).attr("height", 50)
+      .selectAll("rect")
+      .data(dataSource)
+      .enter()
+        .append("rect")
+        .attr("width", function(eachDataElement) {
+          return eachDataelement;
+        })
+        .attr("height", 50)
+        .attr("y", function(eachDataElement, index) {
+          return index*100;
+        });

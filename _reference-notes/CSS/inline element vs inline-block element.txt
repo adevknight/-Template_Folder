@@ -1,0 +1,14 @@
+inline element vs inline-block element
+  
+  ... inline element
+      - We can set margin-right, padding-right, margin-left, or padding-left,
+        but we can NOT set margin-top, padding-top, margin-bottom, or padding-bottom.
+      - We can NOT set width or height of the element.
+      - By default, if an HTML element is not block level element then it must be inline element.
+        Examples: <span>
+          
+  ... inline-block element
+      - We can set margin-right, padding-right, margin-left, or padding-left,
+        also we can set margin-top, padding-top, margin-bottom, or padding-bottom.
+      - We can set width or height of the element.
+      - By default, there is not a single element set to inline-block, we must specify it on CSS manually.

@@ -1,0 +1,653 @@
+{
+  "heading": "Avg Compensation Across Layers and Grades",
+  "heatData": [
+    {
+      "value": "$756k",
+      "Layer": "1",
+      "Grade": "1",
+      "color":"#8bc7b1",
+      "colorText":"#fff"
+    },
+    {
+      "value": "$452k",
+      "Layer": "1",
+      "Grade": "2",
+      "color":"#a2d2c1",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$398k",
+      "Layer": "1",
+      "Grade": "3",
+      "color":"#a8d5c5",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "1",
+      "Grade": "4",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "5",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "6",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "7",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "8",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "9",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "10",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "1",
+      "Grade": "11",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$756k",
+      "Layer": "2",
+      "Grade": "1",
+      "color":"#91cab5",
+      "colorText":"#fff"
+    },
+    {
+      "value": "$396k",
+      "Layer": "2",
+      "Grade": "2",
+      "color":"#a8d5c5",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$544k",
+      "Layer": "2",
+      "Grade": "3",
+      "color":"#96ccb9",
+      "colorText":"#fff"
+    },
+    {
+      "value": "$300k",
+      "Layer": "2",
+      "Grade": "4",
+      "color":"#b9ddd0",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$281k",
+      "Layer": "2",
+      "Grade": "5",
+      "color":"#c5e3d8",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$212k",
+      "Layer": "2",
+      "Grade": "6",
+      "color":"#cbe6dc",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "2",
+      "Grade": "7",
+      "color":"#fff",
+      "colorText":"#transparent"
+    },
+    {
+      "value": 108,
+      "Layer": "2",
+      "Grade": "8",
+      "color":"#e2f1eb",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "2",
+      "Grade": "9",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "2",
+      "Grade": "10",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "2",
+      "Grade": "11",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "3",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$376k",
+      "Layer": "3",
+      "Grade": "2",
+      "color":"#aed8c8",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "3",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$303k",
+      "Layer": "3",
+      "Grade": "4",
+      "color":"#b9ddd0",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$241k",
+      "Layer": "3",
+      "Grade": "5",
+      "color":"#cbe6dc",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$207k",
+      "Layer": "3",
+      "Grade": "6",
+      "color":"#d1e9e0",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$165k",
+      "Layer": "3",
+      "Grade": "7",
+      "color":"#d4eae2",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$210k",
+      "Layer": "3",
+      "Grade": "8",
+      "color":"#e2f1eb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$97k",
+      "Layer": "3",
+      "Grade": "9",
+      "color":"#e8f4ef",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$51k",
+      "Layer": "3",
+      "Grade": "10",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "3",
+      "Grade": "11",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "4",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$341k",
+      "Layer": "4",
+      "Grade": "2",
+      "color":"#b3dbcc",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "4",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$239k",
+      "Layer": "4",
+      "Grade": "4",
+      "color":"#cbe6dc",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$196k",
+      "Layer": "4",
+      "Grade": "5",
+      "color":"#d1e9e0",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$154k",
+      "Layer": "4",
+      "Grade": "6",
+      "color":"#d4eae2",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$110k",
+      "Layer": "4",
+      "Grade": "7",
+      "color":"#e2f1eb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$68k",
+      "Layer": "4",
+      "Grade": "8",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$57k",
+      "Layer": "4",
+      "Grade": "9",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$37k",
+      "Layer": "4",
+      "Grade": "10",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$281k",
+      "Layer": "4",
+      "Grade": "11",
+      "color":"#f3f9fa",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "5",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "5",
+      "Grade": "2",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "5",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$128k",
+      "Layer": "5",
+      "Grade": "4",
+      "color":"#dceee7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$198k",
+      "Layer": "5",
+      "Grade": "5",
+      "color":"#d7ebe4",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$188k",
+      "Layer": "5",
+      "Grade": "6",
+      "color":"#d1e9e0",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$150k",
+      "Layer": "5",
+      "Grade": "7",
+      "color":"#d4eae2",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$104k",
+      "Layer": "5",
+      "Grade": "8",
+      "color":"#e2f1eb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$70k",
+      "Layer": "5",
+      "Grade": "9",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$50k",
+      "Layer": "5",
+      "Grade": "10",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$41k",
+      "Layer": "5",
+      "Grade": "11",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "6",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "6",
+      "Grade": "2",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "6",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "6",
+      "Grade": "4",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$0k",
+      "Layer": "6",
+      "Grade": "5",
+      "color":"#f9fcfb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$139k",
+      "Layer": "6",
+      "Grade": "6",
+      "color":"#d7ebe4",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$123k",
+      "Layer": "6",
+      "Grade": "7",
+      "color":"#dceee7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$94k",
+      "Layer": "6",
+      "Grade": "8",
+      "color":"#e8f4ef",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$59k",
+      "Layer": "6",
+      "Grade": "9",
+      "color":"#e8f4ef",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$41k",
+      "Layer": "6",
+      "Grade": "10",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$20k",
+      "Layer": "6",
+      "Grade": "11",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "7",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "7",
+      "Grade": "2",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "7",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "7",
+      "Grade": "4",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "7",
+      "Grade": "5",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Value": "$163k",
+      "Layer": "7",
+      "Grade": "6",
+      "color":"#d4eae2",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$65k",
+      "Layer": "7",
+      "Grade": "7",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$72k",
+      "Layer": "7",
+      "Grade": "8",
+      "color":"#eef7f3",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$52k",
+      "Layer": "7",
+      "Grade": "9",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$31k",
+      "Layer": "7",
+      "Grade": "10",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$23k",
+      "Layer": "7",
+      "Grade": "11",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "8",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "8",
+      "Grade": "2",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "8",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "8",
+      "Grade": "4",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "8",
+      "Grade": "5",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "8",
+      "Grade": "6",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$38k",
+      "Layer": "8",
+      "Grade": "7",
+      "color":"#f9fcfb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$18k",
+      "Layer": "8",
+      "Grade": "8",
+      "color":"#f9fcfb",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$8k",
+      "Layer": "8",
+      "Grade": "9",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$9k",
+      "Layer": "8",
+      "Grade": "10",
+      "color":"#f3f9fa",
+      "colorText":"#636363"
+    },
+    {
+      "value": "$0k",
+      "Layer": "8",
+      "Grade": "11",
+      "color":"#f9fcfb",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "9",
+      "Grade": "1",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "2",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "3",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "4",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "5",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "6",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "7",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "8",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "value": "$9k",
+      "Layer": "9",
+      "Grade": "9",
+      "color":"#f3f9f7",
+      "colorText":"#636363"
+    },
+    {
+      "Layer": "9",
+      "Grade": "10",
+      "color":"#fff",
+      "colorText":"transparent"
+    },
+    {
+      "Layer": "9",
+      "Grade": "11",
+      "color":"#fff",
+      "colorText":"transparent"
+    }
+  ]
+}

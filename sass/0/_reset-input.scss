@@ -1,0 +1,22 @@
+// ---< _reset-input.scss >--- //
+
+%reset-input {
+  &, &:focus, &.focus {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    outline: none;
+  }
+}
+%reset-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  outline: none;
+}

@@ -1,0 +1,129 @@
+List of ALL Installed SublimeText Custom Packages
+
+                                                                                Alignments - https://packagecontrol.io/packages/Alignment
+                                                                                ... ShortCut = Ctr + Alt + A
+                                                                                ... Select multiple Lline with block selector/multiple cursor then press the 'shortcut'.
+--------------------------------------------------------------------------------
+
+INSTALLED - Bootstrap 3 Snippets - https://packagecontrol.io/packages/Bootstrap%203%20Snippets
+... ShortCut = Type in "bs3" + Ctrl + Space
+... Show Bootstrap 3 Snippets
+
+INSTALLED - BracketHighlighter - https://packagecontrol.io/packages/BracketHighlighter
+... Doesn't need any 'shorcut'.
+--------------------------------------------------------------------------------
+
+                                                                                CanIUse
+--------------------------------------------------------------------------------
+
+INSTALLED - Color Highlighter - https://packagecontrol.io/packages/Color%20Highlighter
+... ShortCut = Ctrl + Shift + C
+... Open Color Picker Window.
+
+... ShortCut = Ctrl + Shift + A
+... Change Color Format. Keyword 'rgb', 'rgba', 'hsv', 'hsl', '#fff', '#ffffff'.
+
+... ShortCut = Ctrl + Alt + D
+... Go to variable definition. For less/sass/scss/stylus.
+--------------------------------------------------------------------------------
+
+                                                                                DISABLED - ColorPicker - https://packagecontrol.io/packages/ColorPicker
+                                                                                ... ShortCut = Ctrl + Shift + C
+                                                                                ... Open Color Picker Window
+--------------------------------------------------------------------------------
+
+BUILTIN DISABLED - CSS
+--------------------------------------------------------------------------------
+
+INSTALLED - CSS3 - https://packagecontrol.io/packages/CSS3
+___ The most complete CSS support for Sublime Text 3.
+___ Conflicted with Emmet.
+... Doesn't need any 'shortcut'.
+--------------------------------------------------------------------------------
+
+INSTALLED DISABLED - Emmet - https://packagecontrol.io/packages/Emmet
+___ Conflicted with CSS3.
+... Many 'shortcut', see homepage.
+--------------------------------------------------------------------------------
+
+INSTALLED - FindKeyConflict - https://packagecontrol.io/packages/FindKeyConflicts
+... Many 'shortcut', see homepage.
+... Command run via 'Ctrl + Shift + P' + 'FindKeyConflict'.
+--------------------------------------------------------------------------------
+
+BUILTIN DISABLED - HTML
+--------------------------------------------------------------------------------
+
+INSTALLED - HTML5 - https://packagecontrol.io/packages/HTML5
+___ Add HTML5 syntax mode & snippets to Sublime Text.
+... ShortCut = Type in + Ctr + Space
+... Show list of suggestion.
+--------------------------------------------------------------------------------
+
+INSTALLED - HTML-CSS-JS Prettify - https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify
+... ShortCut = Right Click + HTML/CSS/JS Prettify + Prettify Code.
+--------------------------------------------------------------------------------
+
+INSTALLED - jQuery - https://packagecontrol.io/packages/jQuery
+___ It has syntax highlighting and almost all of the jquery methods as snippets.
+... Doesn't need any 'shortcut'.
+--------------------------------------------------------------------------------
+
+INSTALLED DISABLED - ​jQuery Snippets Pack - https://packagecontrol.io/packages/jQuery%20Snippets%20pack
+... Doesn't need any 'shortcut'.
+--------------------------------------------------------------------------------
+
+INSTALLED DISABLED - LiveReload - https://packagecontrol.io/packages/LiveReload
+___ Don't use it. Use Grunt Watch.
+--------------------------------------------------------------------------------
+
+INSTALLED DISABLED - LiveStyle - https://packagecontrol.io/packages/LiveStyle
+___ Don't use it. Use Grunt Watch.
+--------------------------------------------------------------------------------
+
+INSTALLED - PlainTasks - https://packagecontrol.io/packages/PlainTasks
+___ Task management
+... Many 'shortcut', see Tutorial
+--------------------------------------------------------------------------------
+
+                                                                                DISABLED - Sass - https://packagecontrol.io/packages/Sass
+--------------------------------------------------------------------------------
+
+INSTALLED - SCSS - https://packagecontrol.io/packages/SCSS
+___ A Sass & SCSS syntax package.
+--------------------------------------------------------------------------------
+
+INSTALLED - SideBarEnhancements - https://packagecontrol.io/packages/SideBarEnhancements
+--------------------------------------------------------------------------------
+
+INSTALLED - Super Calculator - https://packagecontrol.io/packages/Super%20Calculator
+... ShortCut = Alt + C
+... Do simple math calculation on the selected line.
+--------------------------------------------------------------------------------
+
+                                                                                SublimeLinter - https://packagecontrol.io/packages/SublimeLinter
+                                                                                ... Command run via 'Ctrl + Shift + P' + 'SublimeLinter'.
+--------------------------------------------------------------------------------
+
+INSTALLED - Material Color Scheme - https://packagecontrol.io/packages/Material%20Color%20Scheme - 
+___ JUST COLOR SCHEME ADD ON
+--------------------------------------------------------------------------------
+
+                                                                                SublimeCodeIntel - https://packagecontrol.io/packages/SublimeCodeIntel
+                                                                                ... ShortCut = Alt + Click
+                                                                                ... Jump to Definition
+
+                                                                                ... ShortCut = Ctrl + Windows + Alt + Up
+                                                                                ... Jump to Definition
+
+                                                                                ... ShortCut = Ctrl + Windows + Alt + Left
+                                                                                ... Go Back from Definition
+
+                                                                                ... ShortCut = Ctrl + Shift + Space
+                                                                                ... Manual Code Intelligence
+--------------------------------------------------------------------------------
+
+                                                                                DISABLED - Terminal - https://packagecontrol.io/packages/Terminal
+--------------------------------------------------------------------------------
+
+

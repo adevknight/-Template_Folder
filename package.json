@@ -1,0 +1,12 @@
+{
+  "name": "project-name",
+  "version": "0.1.0",
+  "homepage": "http://www.topcoder.com",
+  "author": {
+    "name": "rh_abror",
+    "email": "rh.abror@gmail.com"
+  },
+  "devDependencies": {
+
+  }
+}

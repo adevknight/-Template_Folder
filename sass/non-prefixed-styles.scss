@@ -1,0 +1,115 @@
+/**
+ *  ====================================================== 
+ *  styles.scss
+ *
+ *  Author  : Rh Abror
+ *  Project : Project Name
+ *  Date    : June 24th 2014
+ *  Notes   : -
+ *  ======================================================
+ */
+
+//
+// ======================================================
+// >> COMPASS
+// ======================================================
+//
+@import "compass";
+
+//
+// ======================================================
+// >> BASE and UTILITIES
+// ======================================================
+// 
+// Framework
+// @import "0/bootstrap";
+// @import "0/foundation";
+
+// Resets & Hacks
+// @import "0/normalize";
+// @import "0/ie-6-7-8";
+// @import "0/reset-body";
+// @import "0/reset-natural-box";
+// @import "0/reset-anchor";
+// @import "0/reset-input";
+
+// Variables
+// @import "0/variable-colors";
+// @import "0/variable-typography";
+
+// Tools
+// @import "0/tool-alignments";
+// @import "0/tool-full-height";
+// @import "0/tool-full-width";
+// @import "0/tool-responsive-image";
+// @import "0/tool-sprites";
+// @import "0/tool-unit-calculator";
+
+//
+// ======================================================
+// >> SHARED MODULES
+// ======================================================
+//
+// @import "1_modules/shared/module-name";
+
+//
+// ======================================================
+// >> MODULES for index.html
+// ======================================================
+//
+// This page also uses "1_modules/shared/module-name"
+// This page also uses "1_modules/shared/module-name"
+// @import "1_modules/01/module-name";
+// @import "1_modules/01/module-name";
+
+//
+// ======================================================
+// >> MODULES for page-2.html
+// ======================================================
+//
+// This page also uses "1_modules/shared/module-name"
+// This page also uses "1_modules/shared/module-name"
+// @import "1_modules/02/module-name";
+// @import "1_modules/02/module-name";
+
+//
+// ======================================================
+// >> MODULES for page-3.html
+// ======================================================
+//
+// This page also uses "1_modules/shared/module-name"
+// This page also uses "1_modules/shared/module-name"
+// @import "1_modules/03/module-name";
+// @import "1_modules/03/module-name";
+
+//
+// ======================================================
+// >> LAYOUT RULES
+// ======================================================
+//
+// @import "2_layout/shared-layout-css-mode";
+// @import "2_layout/shared-layout-html-mode";
+// @import "2_layout/layout"; * Optional
+// @import "2_layout/ios-ipad"; * Optional
+// @import "2_layout/ios-iphone"; * Optional
+
+//
+// ======================================================
+// >> STATES
+// ======================================================
+//
+// @import "3_states/is-hidden";
+
+//
+// ======================================================
+// >> ANIMATIONS
+// ======================================================
+//
+// @import "4_animation-name/is-animation-name";
+
+//
+// ======================================================
+// >> THEMES
+// ======================================================
+//
+// @import "5_themes/THEME-Theme-Name"; * Optional

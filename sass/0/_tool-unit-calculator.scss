@@ -1,0 +1,26 @@
+// ---< _tool-unit-calculator.scss >--- //
+
+// Calculate 'rem' value with given 'px' value from Retina Storyboard
+@function rrem ($px) {
+  $rrem: $px/(2*$baseFontSize);
+  @return $rrem*1rem;
+}
+
+// Calculate 'rem' value with given 'px' value from Normal Storyboard
+@function rem ($px) {
+  $rrem: $px/$baseFontSize;
+  @return $rrem*1rem;
+}
+
+// Calculate 'px' value with given 'px' value from Retina Storyboard
+@function rpx ($px) {
+  $rpx: $px/2;
+  @return $rpx;
+}
+
+// Calculate '%' relative to full width value with given 'px' value from Normal and Retina Storyboard
+@function perc ($px) {
+  $storyboardWidth: 1024px;
+  $perc: $px/($storyboardWidth);
+  @return $perc*100%;
+}

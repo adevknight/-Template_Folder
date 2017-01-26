@@ -1,0 +1,38 @@
+angular.forEach() - Method =============================================================================================
+
+// Basic Block of angular.forEach()
+angular.forEach(x, function(value, key, obj) {...}, y);
+Where:
+  x                          --> is an object or an array to iterate over
+  function(value, key, obj)  --> is the function to call (iterator function) for each item in object (each value in array)
+    value                    --> is the argument that refer to object property's VALUE or in the case of an array, it refers to array's VALUE
+    key                      --> is the argument that refer to object property's NAME or in the case of an array, it refers to array's INDEX NUMBER
+    obj                      --> (OPTIONAL) is the argument that refer to object or array to iterate over
+  y                          --> (OPTIONAL) is an object that become the context for the iterator function,
+                                 (or the object that will become the 'this' value inside the iterator function, if we used it)
+  Note that angular.forEach() will only iterate over 'Own Properties/Methods' of an object, it will not iterate over 'Inherited Properties/Methods'
+
+// Iterate over an Object
+var person = {
+  name : "Albert",
+  gender : "Male",
+  age : 23,
+  job : "Software Engineer"
+};
+var newLog = [];
+
+angular.forEach(person, function(value, key) {
+  this.push(key + ": " + value);
+}, newLog);
+
+console.log(newLog); // ["name: Albert", "gender: Male", "age: 23", "job: Software Engineer"]
+
+// Iterate over an array
+var participant = ["Albert", "Bob", "Chuck", "Dennis", "Elly"];
+var newLog = [];
+
+angular.forEach(participant, function(value, key) {
+  this.push(key + ": " + value);
+}, newLog);
+
+console.log(newLog); // ["0: Albert", "1: Bob", "2: Chuck", "3: Dennis", "4: Elly"]

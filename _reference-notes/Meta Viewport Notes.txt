@@ -1,0 +1,33 @@
+/* Meta Viewport Notes */
+/* Ref : 
+   http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html
+   http://css-tricks.com/snippets/html/responsive-meta-tag/
+
+
+> width=device-width 
+  // Originally Apple-Proprietary, but then adopted on other mobile browsers 
+  // Case Study iPhone 5 (Retina Display) : 
+     Without 'width=device-width' the browser viewport width will have 980 of 'CSS Pixel' (980px) and
+     the device-width = 320px (CSS Pixel too).
+     If we apply 'width=device-width' the browser viewport width will have 320px (CSS Pixel) and 
+     the device-width still same (never change) 320px.
+  // The visual difference would be :
+     Without 'width=device-width' text look too far (zoom out effect).
+     With 'width=device-width' text fit on screen proportion (not in zoom out nor zoom in mode).
+
+> initial-scale=1
+  // Currently we 2 unit of pixel measurement during web/app development
+     Device Pixel, and
+     CSS Pixel (in Android called Device Independent Pixel or Density Independent Pixel or dp or dip), 
+     The relationship between Device Pixel and CSS Pixel is defined in 'device-pixel-ratio' or 'resolution' feature in media 
+     IF we do not set 'initial-scale=1' when we write in CSS :
+        font-size: 12px actually it does not represent 12px of 'CSS Pixel' or 'dip' value
+        margin: 22px actually it does not represent 22px of 'CSS Pixel' or 'dip' value
+        padding: 32px actually it does not represent 32px of 'CSS Pixel' or 'dip' value
+     However, if we set meta viewport 'initial-scale=1' when we write in CSS :
+        font-size: 12px match exacly as 12px of 'CSS Pixel' or 'dip' value
+        margin: 22px match exacly as 22px of 'CSS Pixel' or 'dip' value
+        padding: 32px match exacly as 32px of 'CSS Pixel' or 'dip' value
+  // Adding the attribute 'initial-scale=1' instructs browsers to establish a 1:1 relationship between 
+     'Writed CSS Pixels' and CSS Pixel or device independent pixels (dip) regardless of device orientation, 
+     and allows the page to take advantage of the full landscape width.

@@ -1,0 +1,49 @@
+> Overflow
+  In Box Model of CSS (Example: <div>),
+  
+  - IF we dont set width
+      and height,
+    THEN the width will be set to 100% (because its default display:block nature of <div>),
+      and the height will be depend on the content of the Box.
+  
+  - IF we set width to certain pixel (with default display:block)
+      and leave height unset,
+    THEN the width will be equal to that certain pixel,
+      and the height will depend on the content of the Box.
+
+  - IF we set width to certain pixel (with default display:block)
+      and set height to certain pixel (with default display:block),
+    THEN the width will be equal to that certain pixel,
+      and the height will be equal to that certain pixel.
+      BUT the content will shown fully overlaps (overflow) the size of width and height,
+      MEANS that the content will fully shown but the size still like the defined size,
+        so the next element (E.g. <div>) in HTML document will be sit under the overlapped content (it can be a problem).
+        
+        This state of condition equal to
+          overflow : visible (DEFAULT)
+        
+        We can fix/modify this condition by setting various overlow property's values:
+          
+          - overflow : hidden
+            The content that flow outside the box will be hidden.
+            No scrollbar to be shown.
+          
+          - overflow : scroll
+            The content that flow outside the box will be hidden, 
+            but the box also offers scrollbar (vertical and horizontal) even if the box does not need scrollbars
+            to view those hidden contents.
+          
+          - overflow : auto
+            The content that flow outside the box will be hidden,
+            but the box also offers scrollbar (vertical or horizontal or both or none) to view those hidden contents.
+            So, in other word it will shows the scrollbar when there is need for scrollbar to appear.
+
+          - overflow : overflow-x
+            The content that flow outside the box will be hidden,
+            but the box also offers horizontal scrollbar to view horizontal hidden contents.
+            The vertical hidden contents will not be shown and will not receive any vertical scrollbar.
+
+          - overflow : overflow-y
+            The content that flow outside the box will be hidden,
+            but the box also offers vertical scrollbar to view vertical hidden contents.
+            The horizontal hidden contents will not be shown and will not receive any horizontal scrollbar.

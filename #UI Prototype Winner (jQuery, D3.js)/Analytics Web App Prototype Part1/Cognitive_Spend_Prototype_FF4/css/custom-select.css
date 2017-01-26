@@ -1,0 +1,156 @@
+/*Custom select css*/
+
+/***********************************
+ * Layout
+ ***********************************/
+ select{
+ 	display: none !important;
+ }
+.wSelect-el {
+	width: 0px;
+	height: 0px;
+	padding: 0px;
+	display: block;
+	margin: 0px;
+	border: none;
+	overflow: hidden;
+}
+.wSelect {
+	position: relative;
+	display: inline-block;
+    vertical-align: middle;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	width: 100% !important;
+}
+.wSelect-arrow {
+	position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #c7d92c;
+}
+.wSelect.wSelect-multiple {
+	overflow: hidden;
+}
+.wSelect-selected {
+	margin: 0px 35px 0px 5px;
+	padding: 5px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+.wSelect-options-holder {
+	position: absolute;
+	display: none;
+	left: 0px;
+	z-index: 200;
+	overflow: hidden;
+	top: 29px !important;
+	left: -1px;
+}
+.wSelect-multiple .wSelect-options-holder {
+	position: relative !important;
+	display: block !important;
+	top: auto !important;
+	z-index: auto !important;
+	border: none !important;
+}
+.wSelect-options {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.wSelect-option {
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-bottom: 1px;
+	cursor: pointer;
+}
+.wSelect-option-last {
+	margin-bottom: 0px;
+}
+.wSelect-option-value {
+	margin: 0 5px;
+	padding: 5px 0;
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.wSelect-option-disabled .wSelect-option-value {
+	opacity: 0.2;
+}
+.wSelect-option-icon {
+	padding-left: 20px;
+}
+
+/***********************************
+ * Theme - classic
+ ***********************************/
+.wSelect-theme-classic.wSelect {
+	border: solid #c1c1c1 1px;
+    color: #555;
+    background-color: #fff;
+	font-size: 12px;
+	font-family: verdana;
+	line-height: 20px;
+}
+.wSelect.wSelect-theme-classic.holder-show{
+	border: 1px solid #0072ff;
+	border-bottom: 1px solid #c1c1c1;
+}
+.wSelect-theme-classic .wSelect-options-holder {
+	background-color: #fff;
+	border: solid #0072ff 1px;
+	width: 100%;
+	border-top: 0;
+}
+.wSelect-theme-classic .wSelect-options {
+	border: solid #FAFAFA 1px;
+	border-radius: 4px;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.wSelect-theme-classic .wSelect-option {
+	background-color: #FFF;
+	color: #333;
+}
+.wSelect-option:hover{
+	background-color: #0072ff;
+}
+.wSelect-theme-classic .wSelect-option-disabled {
+	background-color: #FFF !important;
+	color: #333 !important;
+}
+
+/***********************************
+ * Labels
+ ***********************************/
+.wLabel-top,
+.wLabel-left,
+.wLabel-left-top {
+    vertical-align: middle;
+    font-size: 10px;
+    line-height: 16px;
+    color: #999;
+    display: block;
+    margin: 5px 0 3px 3px;
+}
+.wLabel-left-top {
+    vertical-align: top;
+}
+@media screen and (min-width: 600px) {
+    .wLabel-left,
+    .wLabel-left-top {
+        display: inline-block;
+        width: 70px;
+        text-align: right;
+        margin: 0 0 7px 0;
+    }
+}

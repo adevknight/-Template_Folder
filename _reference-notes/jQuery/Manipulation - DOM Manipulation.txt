@@ -1,0 +1,80 @@
+Methods List:
+
+// DOM Insertion, Around
+
+> .wrap()
+   Wrap an HTML structure around each element in the set of matched elements.
+
+> .unwrap()
+   Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
+
+> .wrapAll()
+   Wrap an HTML structure around all elements in the set of matched elements.
+
+> .wrapInner()
+   Wrap an HTML structure around the content of each element in the set of matched elements.
+
+------------------------------------------------------------------------------------------------------------------------
+// DOM Insertion, Inside
+
+> .append()
+   Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+
+> .appendTo()
+   Insert every element in the set of matched elements to the end of the target.
+
+> .prepend()
+   Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
+
+> .prependTo()
+   Insert every element in the set of matched elements to the beginning of the target.
+
+> .html()
+   Get the HTML contents of the first element in the set of matched elements
+   or set the HTML contents of every matched element.
+
+> .text()
+   Get the combined text contents of each element in the set of matched elements, including their descendants,
+   or set the text contents of the matched elements.
+
+------------------------------------------------------------------------------------------------------------------------
+// DOM Insertion, Outside
+
+> .after()
+   Insert content, specified by the parameter, after each element in the set of matched elements.
+
+> .before()
+   Insert content, specified by the parameter, before each element in the set of matched elements.
+
+> .insertAfter()
+   Insert every element in the set of matched elements after the target.
+
+> .insertBefore()
+   Insert every element in the set of matched elements before the target.
+
+------------------------------------------------------------------------------------------------------------------------
+// DOM Removal,
+
+> .detach()
+   Remove the set of matched elements from the DOM.
+
+> .empty()
+   Remove all child nodes of the set of matched elements from the DOM.
+
+> .remove()
+   Remove the set of matched elements from the DOM.
+
+> .unwrap()
+   Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
+
+------------------------------------------------------------------------------------------------------------------------
+// DOM Replacement,
+
+> .replaceAll()
+   Replace each target element with the set of matched elements.
+
+> .replaceWith()
+   Replace each element in the set of matched elements with the provided new content
+   and return the set of elements that was removed.
+
+------------------------------------------------------------------------------------------------------------------------

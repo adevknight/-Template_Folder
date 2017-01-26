@@ -1,0 +1,48 @@
+//------------------- 1
+
+var big = (x > 10) ? true : false;
+// Just like:
+if (x > 10) {
+  var big = true;
+} else {
+  big = false;
+}
+
+
+//------------------- 2
+
+var big = (x > 10) ? "Greater 10" : (x < 5) ? "Less 5" : "Between 5 and 10";
+// Just like:
+if (x > 10) {
+  var big = "Greater 10";
+} else if (x < 5) {
+  big = "Less 5";
+} else {
+  big = "Between 5 and 10";
+}
+
+
+//------------------- 3
+
+var var2 = var1  || "Falsy Statement";
+// Just like:
+if (var1 == null || var1 == undefined || var1 == '' || var1 = false || var1 = 0) {
+  var var2 = "Falsy Statement";
+} else {
+  var2 = var1;
+}
+
+
+//------------------- 4
+
+function nameOfFunct() {
+  return (x === 5 || y >== 10);
+}
+// Just like:
+function nameOfFunct() {
+  if (x === 5 || y >== 10) {
+    return true;
+  } else {
+    return false;
+  }
+}

@@ -1,0 +1,149 @@
+IF you are just a contributor for SOMEONE ELSES project. ===============================================================
+  
+  Method 1 - Using FORK ------------------------------------------------------------------------------------------------
+
+  1. Find some project that you are interested in the GitHub website.
+  
+  2. FORK the project, this is GitHub operation (not Git operation).
+     It means copying all of the project files, commit history, issues, etc to your GitHub account.
+     By default FORK operation will not make your repository in sync with project's owner repository
+  
+  3. CLONE your GitHub repository (FORKed from project's owner repository) to your local computer,
+     this is Git operation (not GitHub operation).
+     
+     Do following command inside intended project directory:
+     > git clone https://github.com/username/something.git
+  
+  4. Do some coding to make some changes on your local computer.
+     Notes: Before adding any features or fixing bugs, please create a new branch for that particular feature/bug fix,
+     it is the best practice.
+  
+  5. DON'T FORGET to commit it on your local computer.
+  
+  6. PUSH your changes to your GitHub repository, this is Git operation (not GitHub operation)
+     To push only MASTER branch do following:
+     > git push -u repoNickname master
+     OR
+     > git push repoNickname master
+
+     To push all of LOCAL branches do following:
+     > git push repoNickname --all
+  
+  7. Send PULL request to the owner of those project, this is GitHub operation (not Git operation).
+
+  Method 2 - Using Synced FORK or FETCH --------------------------------------------------------------------------------
+  
+  Before going into the steps to take doing this process, it is important to know that in your local computer there are two
+  group of branches reside:
+        1. Local branches - all of the branches that are available for you in local repository.
+        2. Remote branches - all of the branches that are coming from remote repository (e.g. GitHub, etc)
+  How to view list of the branches:
+    To view JUST LOCAL branches
+        > git branch
+    To view JUST REMOTE branches
+        > git branch -r
+        or
+        > git branch --remote
+    To view BOTH LOCAL & REMOTE branches    
+        > git branch -a
+        or
+        > git branch --all
+  
+  After knowing about local & remote branches, here are the steps taken to do SYNCED FORK (or FETCH):  
+  1. Find some project that you are interested in the GitHub website (can be some stranger's project).
+  
+  2. FETCH the project, this is Git operation (not GitHub operation).
+     It means copying all of the project files, commit history, issues, etc from someone else's repository
+     to your REMOTE branch in your local computer.
+     
+     Steps taken to do this process:
+     2.a (MUST DO) Preparation (Assigning nickname to the intended remote or GitHub repository)
+          Get URL (HTTPS) of the desired project, then
+          > git remote add nickname https://github.com/username/something.git
+         
+     2.b Actual FETCHing
+          > git fetch remoteNickname
+          
+          At this point you will not see any change happening on your local working directory, however there is a new
+          remote branches named "remoteNickname/master", "remoteNickname/branch1", "remoteNickname/branch2", and so on.
+          To check it:
+          > git branch -r
+
+          In order to make all of the files from remote repository present in your local working directory,
+          you must MERGE the remoteNickname/master branch to your current local branch, which is to do step 2c below.
+
+          NOTES:
+          Sometimes you want to keep your LOCAL REMOTE branches match exactly like remote branches on the GitHub,
+          Example of cases:
+          Person A and B are the contributors of ABC project on GitHub, at the beginning, on A's and B's
+          local computers there are 3 branches (FETCHed from ABC GitHub's repository) master, branch1, branch2.
+          
+          After completing a feature on branch2, B immidiately MERGE branch2 into master branch and DELETE branch2.
+          After that if A doing some NORMAL FETCH like mentioned above:
+          > git fetch remoteNickname
+          it will still make local remote branches on A' computer consist of three branches (master, branch1, and branch2),
+          i.e. branch2 will still be present on A's local remote branches. Although the commit history and changes 
+          on master branch already in sync with GitHub (recent changes made by B).
+          
+          In order to make branch2 disappear from A's local remote branches,
+          then A must do following FETCH instead of NORMAL FETCH:
+          > git fetch remoteNickname --prune
+
+     2.c Merging remoteNickname/master branch (remote branch) into current working branch
+         > git merge remoteNickname/master
+           IF this message occured: "fatal: refusing to merge unrelated histories"
+         > git merge remoteNickname/master --allow-unrelated-histories
+           It will open VIM window, don't panick it was just asking you to put commit message, do steps below
+           - Press i
+           - Put your commit message
+           - Press ESC
+           - Type :x
+           - Press ENTER
+           It will bring you back to normal console (not VIM)
+
+         At this point your local working directory will have some addition and revision from the remote repository
+         of someone else.
+     
+     Notes:
+      You can combine two commands below
+      > git fetch remoteNickname
+      > git merge remoteNickname/master
+      Into one single command
+      > git pull remoteNickname master
+        // It means it will fetch all branches (master, branch1, branch2, so on) inside remote repository and
+        put it inside your local remote branches, and merge current branch on local directory with MASTER branch of remote
+        repository.
+        Alternatively if you want to merge current branch to match some other branch on remote repository,
+        then do following:
+      > git pull remoteNickname branchToMerge
+  
+  3. Do some coding to make some changes on your local computer.
+     Notes: Before adding any features or fixing bugs, please create a new branch for that particular feature/bug fix,
+     it is the best practice.
+
+  4. DON'T FORGET to commit it on your local computer.
+  
+  5. PUSH your changes to your GitHub repository, this is Git operation (not GitHub operation)
+     To push only MASTER branch do following:
+     > git push -u repoNickname master
+     OR
+     > git push repoNickname master
+
+     To push all of LOCAL branches do following:
+     > git push repoNickname --all
+  
+  6. Send PULL request to the owner of those project, this is GitHub operation (not Git operation).
+
+git clone vs git fetch or git pull =====================================================================================
+
+  git clone is how you get a local copy of an existing remote repository to work on.
+            It's usually only used ONCE for a given repository, unless you want to have multiple working copies of it around.
+            (or want to get a clean copy after messing up your local one).
+
+  git pull (or git fetch + git merge) is how you update THAT local copy with new commits from the remote repository.
+            If you are collaborating with others, it is a command that you will run FREQUENTLY.
+  
+IF you are the owner of the project. ===================================================================================
+  1. Login on GitHub website.
+  2. Create a new repository on GitHub website.
+  3. 

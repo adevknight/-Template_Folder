@@ -1,0 +1,29 @@
+/* ---< _reset-anchor.scss >--- */
+
+%reset-anchor {
+  color: #fff;
+  text-decoration: none;
+}
+%pointer {
+  cursor: pointer;
+}
+// Remove Underline on Anchor
+a {
+  @extend %reset-anchor;
+}
+// Unvisited Link
+a:link {
+  @extend %reset-anchor;
+}
+// Visited Link
+a:visited {
+  @extend %reset-anchor;
+}
+// When Mouse Over Link
+a:hover {
+  @extend %reset-anchor;
+}
+// When Mouse Just Click Link
+a:active {
+  @extend %reset-anchor;
+}

@@ -1,0 +1,114 @@
+{
+  "heading": "Count of Managing Relationships",
+  "bar": [
+    {
+      "ofDirectReports": 1,
+      "ofManagers": 139,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 2,
+      "ofManagers": 153,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 3,
+      "ofManagers": 148,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 4,
+      "ofManagers": 170,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 5,
+      "ofManagers": 166,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 6,
+      "ofManagers": 120,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 7,
+      "ofManagers": 92,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 8,
+      "ofManagers": 73,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 9,
+      "ofManagers": 57,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 10,
+      "ofManagers": 35,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 11,
+      "ofManagers": 32,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 12,
+      "ofManagers": 22,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 13,
+      "ofManagers": 16,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 14,
+      "ofManagers": 11,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 15,
+      "ofManagers": 11,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 16,
+      "ofManagers": 5,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 17,
+      "ofManagers": 4,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 18,
+      "ofManagers": 3,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 19,
+      "ofManagers": 1,
+      "color" : "#1592a5"
+    },
+    {
+      "ofDirectReports": 20,
+      "ofManagers": 6,
+      "color" : "#1592a5"
+    }
+
+  ],
+  "barAxis": [{
+    "xAxisText": "#OF MANAGERS",
+    "yAxisText": "#OF DIRECT REPORTS",
+    "legends": [{
+        "color": "#1592a5",
+        "legendFor": "#OF MANAGERS"
+      }]
+  }]
+}

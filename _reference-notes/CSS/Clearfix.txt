@@ -1,0 +1,23 @@
+> Clearfix
+  - Prolog
+  Before using "float" element in your website, let us consider few things :
+    -- If your target is > IE9 then better use
+        display: inline-block; or
+        display: flex; (More Advanced, Less Support, for future)
+    -- Use "float" property only if we need support for <= IE9
+
+  - Definition
+  By nature a <div> or a block element that contain one or many floated child elements will ignore their presense,
+  in essense, they were just ignoring them and do not properly contain them as it suppose to be.
+  Examples:
+    <div class="container">
+      <div class="float-left">LEFT</div>
+      <div class="float-right">RIGHT</div>
+    </div>
+
+    IF we don't specify the .container height (Most of the time we won't specify the height),
+    then the .container will have no height at all, eventhough the .float-left and .float-right clearly have some height.
+    This is what we called anomaly of float container.
+  
+  In order to give the auto height to the .container so it can really contain the .float-left and .float-right we must apply
+  either a BFC with overflow: hidden | auto; or A CLEARFIX CLASS to the .container.

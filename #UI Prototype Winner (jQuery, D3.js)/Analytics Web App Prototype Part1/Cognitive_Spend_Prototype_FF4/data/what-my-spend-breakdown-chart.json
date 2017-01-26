@@ -1,0 +1,15 @@
+{
+  "heading": "What is My Spend Breakdown?",
+  "total": 10000,
+  "colors": {
+    "TOTAL": "#1592a5",
+    "OTHERS": "#8bc7b1"
+  },
+  "dataset": [
+    {"name": "CAT_1", "value": 2200},
+    {"name": "CAT_2", "value": 400},
+    {"name": "CAT_3", "value": 700},
+    {"name": "CAT_4", "value": 500},
+    {"name": "CAT_5", "value": 800}
+  ]
+}

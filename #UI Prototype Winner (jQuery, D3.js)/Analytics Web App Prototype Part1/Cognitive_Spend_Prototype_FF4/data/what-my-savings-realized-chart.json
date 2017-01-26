@@ -1,0 +1,111 @@
+{
+  "heading": "What are My Realized Savings",
+  "dataset": {
+    "chart1": [
+      {
+        "name": "Realized Savings",
+        "color": "#8BC7B1",
+        "values": [
+          {"name": "BU_1", "value": 40},
+          {"name": "BU_2", "value": 50},
+          {"name": "BU_3", "value": 70},
+          {"name": "BU_4", "value": 45},
+          {"name": "BU_5", "value": 30},
+          {"name": "BU_6", "value": 20},
+          {"name": "BU_7", "value": 15},
+          {"name": "BU_8", "value": 34},
+          {"name": "BU_9", "value": 50},
+          {"name": "BU_10", "value": 45}
+        ]
+      },
+      {
+        "name": "Contracted Savings",
+        "color": "#E69798",
+        "values": [
+          {"name": "BU_1", "value": 20},
+          {"name": "BU_2", "value": 50},
+          {"name": "BU_3", "value": 10},
+          {"name": "BU_4", "value": 0},
+          {"name": "BU_5", "value": 10},
+          {"name": "BU_6", "value": 40},
+          {"name": "BU_7", "value": 35},
+          {"name": "BU_8", "value": 24},
+          {"name": "BU_9", "value": 10},
+          {"name": "BU_10", "value": 15}
+        ]
+      },
+      {
+        "name": "Target Savings",
+        "color": "#F89720",
+        "values": [
+          {"name": "BU_1", "value": 62},
+          {"name": "BU_2", "value": 100},
+          {"name": "BU_3", "value": 85},
+          {"name": "BU_4", "value": 50},
+          {"name": "BU_5", "value": 50},
+          {"name": "BU_6", "value": 60},
+          {"name": "BU_7", "value": 40},
+          {"name": "BU_8", "value": 75},
+          {"name": "BU_9", "value": 75},
+          {"name": "BU_10", "value": 65}
+        ]
+      }
+    ],
+    "chart2": [
+      {
+        "name": "Realized Savings",
+        "color": "#8BC7B1",
+        "values": [
+          {"name": "CAT_1", "value": 25},
+          {"name": "CAT_2", "value": 45},
+          {"name": "CAT_3", "value": 65},
+          {"name": "CAT_4", "value": 55},
+          {"name": "CAT_5", "value": 10},
+          {"name": "CAT_6", "value": 30},
+          {"name": "CAT_7", "value": 45},
+          {"name": "CAT_8", "value": 30},
+          {"name": "CAT_9", "value": 25},
+          {"name": "CAT_10", "value": 20},
+          {"name": "CAT_11", "value": 30},
+          {"name": "CAT_12", "value": 55}
+        ]
+      },
+      {
+        "name": "Contracted Savings",
+        "color": "#E69798",
+        "values": [
+          {"name": "CAT_1", "value": 40},
+          {"name": "CAT_2", "value": 20},
+          {"name": "CAT_3", "value": 15},
+          {"name": "CAT_4", "value": 35},
+          {"name": "CAT_5", "value": 20},
+          {"name": "CAT_6", "value": 30},
+          {"name": "CAT_7", "value": 25},
+          {"name": "CAT_8", "value": 15},
+          {"name": "CAT_9", "value": 30},
+          {"name": "CAT_10", "value": 60},
+          {"name": "CAT_11", "value": 30},
+          {"name": "CAT_12", "value": 45}
+        ]
+      },
+      {
+        "name": "Target Savings",
+        "color": "#F89720",
+        "values": [
+          {"name": "CAT_1", "value": 60},
+          {"name": "CAT_2", "value": 80},
+          {"name": "CAT_3", "value": 65},
+          {"name": "CAT_4", "value": 75},
+          {"name": "CAT_5", "value": 50},
+          {"name": "CAT_6", "value": 45},
+          {"name": "CAT_7", "value": 90},
+          {"name": "CAT_8", "value": 100},
+          {"name": "CAT_9", "value": 50},
+          {"name": "CAT_10", "value": 40},
+          {"name": "CAT_11", "value": 70},
+          {"name": "CAT_12", "value": 65}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+Methods List:
+
+// Event Handler Attachment
+
+> .jQuery.proxy()
+   Takes a function and returns a new one that will always have a particular context.
+
+> .on()
+   Attach an event handler function for one or more events to the selected elements.
+
+   Syntax:
+      $(selector).on("eventName", "a", b, eventHandler);
+
+      Where
+         eventName            --> Could be click, dblclick, mouseup, mousedown, etc.
+         a                    --> (OPTIONAL) selector for event delegation, which mean if there is a notification 
+                                  that an event happen in $(selector) check the event.target, if it match with "a"
+                                  selector, then do the eventHandler function. Use this argument to enable
+                                  "EVENT DELEGATION" feature of .on() method.
+         b                    --> (OPTIONAL) the data to be passed on to event.data.
+         eventHandler         --> function(eventObject) {...}, the eventObject is automatically/guaranteed to pass on to
+                                  the function, eventHandler is the function to be called when the event happened.
+   
+   Example:
+      in HTML
+         <div id="box">
+            <div class="wrapper">
+               <p class="no-click">No Click</p>
+               <p class="please-click">Please Click</p>
+            </div>
+         </div>
+      in JS
+         $("#box").on("click", ".wrapper p.please-click", {x : "is Clicked"}, function(e) {
+           console.log(e.data.x);
+           console.log(e.target.textContent);
+         }).find(".no-click").text("No Click has changed");
+      in Console
+         "is Clicked"
+         "Please Click"
+
+> .off()
+   Remove an event handler.
+
+   Syntax:
+      $(selector).off("eventName", "a", eventHandler);
+
+      Where
+         eventName            --> Could be click, dblclick, mouseup, mousedown, etc.
+         a                    --> Selector for event delegation, which mean if there is a notification 
+                                  that an event happen in $(selector) check the event.target, if it match with "a"
+                                  selector, then do the eventHandler function. Use this argument to enable
+                                  "EVENT DELEGATION" feature of .off() method.
+         eventHandler         --> (OPTIONAL) function(eventObject) {...}, the eventObject is automatically/guaranteed to pass on to
+                                  the function, eventHandler is the function to be called when the event happened.
+
+   Example:
+      in JS
+         $("#box").on("click", ".wrapper p.please-click", {x : "is Clicked"}, function(e) {
+           console.log(e.data.x + " and dismantle the event listener");
+           $("#box").off("click", ".wrapper p.please-click");
+         });
+
+> .one()
+   Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
+
+> .trigger()
+   Execute all handlers and behaviors attached to the matched elements for the given event type.
+
+> .triggerHandler()
+   Execute all handlers attached to an element for an event.
+
+------------------------------------------------------------------------------------------------------------------------
+// Browser Events
+
+> .error()
+   Bind an event handler to the “error” JavaScript event.
+
+> .resize()
+   Bind an event handler to the “resize” JavaScript event,
+   or trigger that event on an element.
+
+> .scroll()
+   Bind an event handler to the “scroll” JavaScript event,
+   or trigger that event on an element.
+
+------------------------------------------------------------------------------------------------------------------------
+// Document Loading
+
+> .load()
+   Bind an event handler to the “load” JavaScript event.
+
+> .ready()
+   Specify a function to execute when the DOM is fully loaded.
+
+> .unload()
+   Bind an event handler to the “unload” JavaScript event.
+
+------------------------------------------------------------------------------------------------------------------------
+
+// Form Events
+
+> .blur()
+   Bind an event handler to the “blur” JavaScript event,
+   or trigger that event on an element.
+
+> .change()
+   Bind an event handler to the “change” JavaScript event,
+   or trigger that event on an element.
+
+> .focus()
+   Bind an event handler to the “focus” JavaScript event,
+   or trigger that event on an element.
+
+> .focusin()
+   Bind an event handler to the “focusin” event.
+
+> .focusout()
+   Bind an event handler to the “focusout” JavaScript event.
+
+> .select()
+   Bind an event handler to the “select” JavaScript event,
+   or trigger that event on an element.
+
+> .submit()
+   Bind an event handler to the “submit” JavaScript event,
+   or trigger that event on an element.
+
+------------------------------------------------------------------------------------------------------------------------
+// Keyboard Events
+
+> .keypress()
+   Bind an event handler to the “keypress” JavaScript event,
+   or trigger that event on an element.
+
+> .keydown()
+   Bind an event handler to the “keydown” JavaScript event,
+   or trigger that event on an element.
+
+> .keyup()
+   Bind an event handler to the “keyup” JavaScript event,
+   or trigger that event on an element.
+
+------------------------------------------------------------------------------------------------------------------------
+// Mouse Events
+
+> .click()
+   Bind an event handler to the “click” JavaScript event,
+   or trigger that event on an element.
+
+> .dblclick()
+   Bind an event handler to the “dblclick” JavaScript event,
+   or trigger that event on an element.
+
+> .contextmenu()
+   Bind an event handler to the “contextmenu” JavaScript event,
+   or trigger that event on an element.
+
+> .mousedown()
+   Bind an event handler to the “mousedown” JavaScript event,
+   or trigger that event on an element.
+
+> .mouseup()
+   Bind an event handler to the “mouseup” JavaScript event,
+   or trigger that event on an element.
+
+> .mouseover()
+   Bind an event handler to the “mouseover” JavaScript event, or trigger that event on an element.
+
+> .hover()
+   Bind one or two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.
+
+> .mousemove()
+   Bind an event handler to the “mousemove” JavaScript event,
+   or trigger that event on an element.
+
+> .mouseenter()
+   Bind an event handler to be fired when the mouse enters an element,
+   or trigger that handler on an element.
+
+> .mouseleave()
+   Bind an event handler to be fired when the mouse leaves an element,
+   or trigger that handler on an element.
+
+> .mouseout()
+   Bind an event handler to the “mouseout” JavaScript event,
+   or trigger that event on an element.
+
+------------------------------------------------------------------------------------------------------------------------
+
+EVENT OBJECTS
+   - It is guaranteed to be passed TO EVENT HANDLER
+
+COMMONLY USED EVENT OBJECTS PROPERTIES and METHODS
+   > event.target
+     The DOM element that INITIATED the event.
+
+   > event.stopPropagation()
+     Prevents the event from bubbling up the DOM tree,
+     preventing any parent handlers from being notified of the event.
+
+   > event.preventDefault()
+     If this method is called, the default action of the event will not be triggered.
+
+   > event.data
+     An optional OBJECT OF DATA passed to an event method when the current executing handler is bound.

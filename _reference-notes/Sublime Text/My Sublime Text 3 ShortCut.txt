@@ -1,0 +1,48 @@
+Sublime Text 3 ShortCut
+
+> Open Package Installer 
+  = Ctrl + Shift + P
+> Open List of Files in Project Folders 
+  = Ctrl + P
+----------------------------------------------
+> Select One Line
+  = Ctrl + L
+> Copy One Line + Paste It on One Line Below
+  = Ctrl + Shift + D
+> Cut One Line
+  = Ctrl + X
+> Delete One Line
+  = Ctrl + Shift + K
+> Select One Indented Elements 
+  = Ctrl + Shift + J
+----------------------------------------------
+> Increase Indent (Tab-ing)
+  = Tab | Ctrl + }
+> Decrease Indent (UnTab-ing)
+  = Shift + Tab | Ctrl + {
+----------------------------------------------
+> MultiCursor Selection Using Mouse 
+  = Ctrl + LeftClick
+> MultiCursor Straight Selection Using Keyboard 
+  = Ctrl + Alt + Up/Down
+----------------------------------------------
+> Find
+  = Ctrl + F
+> Replace
+  = Ctrl + H
+----------------------------------------------
+> Comment/UnComment One Line
+  = Ctrl + /
+> Comment/UnComment Block
+  = Ctrl + Shift + /
+----------------------------------------------
+> Show/Hide SideBar
+  = Ctrl + KB
+----------------------------------------------
+> Transform Text to All Uppercase
+  = Select Text + Ctrl + KU
+> Transform Text to All Lowercase
+  = Select Text + Ctrl + KL 
+----------------------------------------------
+> Show AutoComplete Suggestion
+  = Ctrl + Space

@@ -1,0 +1,44 @@
+/* ---< _tool-sprites.scss >--- */
+
+// >> Method 1 : Using Provided Compass Sprite
+// ------------------------------------
+@import "x1/icons-group-name/*.png";
+@import "x2/icons-group-name/*.png";
+
+// Generate All CSS Class of Icons from 'icons-group-name' folder
+@include all-icons-group-name-sprites;
+
+// Generate All CSS Class for 'icon-name' in 'icon-group-name' folder
+.class-name {
+  @include icons-group-name-sprite(icon-name);
+  @include icons-group-name-sprite(icon-name);
+}
+
+// Sprite + Sass Function
+// '<map>-sprite-height' and '<map>-sprite-width'
+$icon-width: icons-group-name-sprite-width(icon-name)
+.icon-container-retina {
+  width: $icon-width/2;
+}
+
+// Magic Selectors: Auto Class Generator for :hover, :active, :target
+// In 'icons-group-name' folder give ending name to certain icon.
+// E.g : 'submit.png' for default normal icon.
+// and 'submit_hover.png', 'submit_active.png', 'submit_target.png' for other states.
+// Then,
+@import "x1/icons-group-name/*.png";
+// Then, to '@include' choose either:
+@include all-icons-group-name-sprites;
+// or
+@include icons-group-name-sprite(submit);
+// It is best and easy to use @include icons-group-name-sprite(submit) inside a .classNane
+// Examples of usage in icon with <span> tag.
+span.className {
+  @include icons-group-name-sprite(submit);
+  display: inline-block;
+  width: icons-group-name-sprite-width(submit);
+  height: icons-group-name-sprite-height(submit);
+}
+
+// >> Method 2 : Using http://css.spritegen.com/
+// ------------------------------------

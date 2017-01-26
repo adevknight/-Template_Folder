@@ -1,0 +1,242 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Built in Properties:
+
+  1. .length
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Built in Methods:
+
+  1.   Array.from()
+  2.   Array.isArray()
+  3.   Array.observe() - OBSOLETE (NO MORE SUPPORT FROM MODERN BROWSERS)
+  4.   Array.of()
+  5.   Array.prototype.concat()                           - DONE
+  6.   Array.prototype.copyWithin()
+  7.   Array.prototype.entries()
+  8.   Array.prototype.every()                  - Loops   - DONE
+  9.   Array.prototype.fill()
+  10.  Array.prototype.filter()
+  11.  Array.prototype.find()
+  12.  Array.prototype.findIndex()
+  13.  Array.prototype.forEach()                - Loops   - DONE
+  14.  Array.prototype.includes()
+  15.  Array.prototype.indexOf()
+  16.  Array.prototype.join()                             - DONE
+  17.  Array.prototype.keys()
+  18.  Array.prototype.lastIndexOf()
+  19.  Array.prototype.map()                              - IN PROGRESS
+                                                                                  20.  Array.prototype.pop()
+                                                                                  21.  Array.prototype.push()
+  22.  Array.prototype.reduce()
+  23.  Array.prototype.reduceRight()
+                                                                                  24.  Array.prototype.reverse()
+                                                                                  25.  Array.prototype.shift()
+                                                                                  26.  Array.prototype.slice()
+  27.  Array.prototype.some()
+                                                                                  28.  Array.prototype.sort()
+                                                                                  29.  Array.prototype.splice()
+  30.  Array.prototype.toLocaleString()
+  31.  Array.prototype.toSource()
+  32.  Array.prototype.toString()
+                                                                                  33.  Array.prototype.unshift()
+  34.  Array.prototype.values()
+  35.  Array.prototype[@@iterator]()
+
+  5 .concat() ----------------------------------------------------------------------------------------------------------
+
+    // Definition: 
+        - The concat() method is used to merge TWO OR MORE arrays.
+        - This method does not change the existing arrays, but instead returns a new array.
+
+    // Return value of .concat()
+        It return a new array.
+
+    // Example - Concating 2 arrays
+        var x = [1,2,3,4];
+        var y = [5,6,7,8];
+
+        var newArray = x.concat(y);
+        console.log(newArray) // [1,2,3,4,5,6,7,8]
+
+    // Example - Concating MORE THAN TWO arrays
+        var x = [1,2,3,4];
+        var y = [5,6,7,8];
+        var z = [9,0];
+
+        var newArray = x.concat(z,y);
+        console.log(newArray) // [1,2,3,4,9,0,5,6,7,8]
+
+  8 .every() -----------------------------------------------------------------------------------------------------------
+
+    // Definition: 
+        - The every() method tests whether all elements in the array pass the test implemented by the provided function.
+        - 
+        - The range of elements processed by every() is the array set BEFORE the FIRST INVOCATION of callback.
+        - Elements which are APPENDED to the array AFTER the call to every() begins, will not be visited by callback.
+        - If EXISTING elements of the array are CHANGED,
+          their value as passed to callback will be the value at the time every visits them.
+        - Elements that are DELETED BEFORE are not visited.
+
+    // Return value of .every()
+        Either "true" or "false". Each element in the array will be tested by callback function and if ALL of them
+        return TRUTHY statement then the every() method will return "true", but if one or more of the callback function
+        on one or more of the elements return FALSY statement, then it will make the every() method returns "false".
+
+    // Syntax:
+        function funcName(a, b, c) {
+          ...
+        };
+        x.every(funcName, y);
+
+        x                 --> the array to iterate over
+        funcName          --> callback function, in the form of function funcName(a,b,c) {...}
+                              a (required)  --> the element value
+                              b (optional)  --> the element index
+                              c (optional)  --> the array being traversed
+                              funcName should return boolean value, or either return falsy or truthy statement.
+        y (optional)      --> value to use as "this" (i.e reference Object) when executing callback function.
+                              If a y parameter is provided to every(), it will be passed to callback function when invoked
+                              for use as its "this" value.  Otherwise, the value undefined will be passed
+                              for use as its "this" value.
+    // Simple Example
+        function isBigEnough(element, index, array) {
+          return element >= 10;
+        };
+        [12, 5, 8, 130, 44].every(isBigEnough);   // false
+        [12, 54, 18, 130, 44].every(isBigEnough); // true
+
+  13 .forEach() --------------------------------------------------------------------------------------------------------
+
+    // Definition: 
+        - forEach() executes the provided callback function once for each element present in the array
+          in ascending order. It is not invoked for index properties that have been deleted or are uninitialized
+          (i.e. on sparse arrays).
+        - The typical use case is to execute side effects at the end of a chain.
+        - Elements that are APPENDED to the array AFTER the call to forEach() begins WILL NOT be visited by callback.
+        - If the values of EXISTING elements of the array are CHANGED,
+          the value passed to callback will be the value at the time forEach() visits them.
+        - Elements that are DELETED BEFORE being visited are not visited.
+        - If elements that are ALREADY VISITED are removed (e.g. using shift()) during the iteration,
+          later elements will be skipped.
+
+    // Return value of .forEach()
+        Unlike map() or reduce(), forEach() always returns the value undefined and is not chainable.
+
+    // Syntax:
+        x.forEach(callback, y);
+
+        x                 --> the array to iterate over
+        callback          --> in the form of function(a,b,c) {...}
+                              a (optional)  --> the element VALUE
+                              b (optional)  --> the element INDEX
+                              c (optional)  --> the array being traversed
+        y (optional)      --> value to use as "this" (i.e reference Object) when executing callback.
+                              If a y parameter is provided to forEach(), it will be passed to callback when invoked
+                              for use as its "this" value.  Otherwise, the value undefined will be passed
+                              for use as its "this" value.
+    
+    // Simple Example
+        var a = ["a", "b", "c"];
+
+        a.forEach(function(element) {
+            console.log(element);
+        });
+          // a
+          // b
+          // c
+
+    // Example - "this" arguments passed to y parameter
+        // Constructor
+        function Counter() {
+          this.sum = 0;
+          this.count = 0;
+        }
+        // Adding .add() method that accept an array
+        Counter.prototype.add = function(array) {
+          array.forEach(function(entry) {
+            this.sum += entry;
+            ++this.count;
+          }, this); // "this" passed to y parameter
+        };
+        // Creating obj instance
+        var obj = new Counter();
+        obj.add([2, 5, 9]);
+        console.log(obj.count) // 3 
+        console.log(obj.sum) // 16
+
+  16 .join() -----------------------------------------------------------------------------------------------------------
+
+    // Definition: 
+        - The join() method joins all elements of an array into A STRING.
+
+    // Return value of .forEach()
+        It returns a string with all array elements joined.
+
+    // Syntax:
+        x.join(a)
+
+        x                 --> the array, all of the elements inside it will be joined together.
+        a (optional)      --> the separator between elements.
+                              If omitter (default), the array elements are separated with a comma or ",".
+                              Examples: ", ", " - ", " : ", and so on.
+
+    // Simple Example
+        var a = ["Wind", "Rain", "Fire"];
+        a.join();      // "Wind,Rain,Fire"
+        a.join(", ");  // "Wind, Rain, Fire"
+        a.join(" + "); // "Wind + Rain + Fire"
+        a.join("");    // "WindRainFire"
+
+  19 .map() ------------------------------------------------------------------------------------------------------------
+
+    // Definition: 
+        - The map() method creates A NEW ARRAY with the results of calling a provided function on EVERY ELEMENT in this
+          array.
+        - map() calls a provided callback function ONCE for each element in an array, in order,
+          and constructs a new array from the results.
+        - callback is INVOKED ONLY for indexes of the array which have assigned values, including undefined.
+          It is NOT CALLED for missing elements of the array (that is, indexes that have never been set,
+          which have been deleted or which have never been assigned a value).
+        - map() does not mutate the array on which it is called (although callback, if invoked, may do so).
+        - The range of elements processed by map() is set BEFORE the first invocation of callback.
+          Elements which are appended to the array AFTER the call to map begins will not be visited by callback.
+        - If EXISTING elements of the array are CHANGED, or DELETED, their value as passed to callback
+          will be the value at the time map visits them.
+        - Elements that are DELETED BEFORE are not visited.
+
+    // Return value of .map()
+        It returns A NEW ARRAY with each element being the RESULTS OF the callback function.
+
+    // Syntax:
+        x.map(callback, y);
+
+        x                 --> the array to iterate over
+        callback          --> in the form of function(a,b,c) {...}
+                              a (optional)  --> the element VALUE
+                              b (optional)  --> the element INDEX
+                              c (optional)  --> the array being traversed
+        y (optional)      --> value to use as "this" (i.e reference Object) when executing callback.
+                              If a y parameter is provided to map(), it will be passed to callback when invoked
+                              for use as its "this" value.  Otherwise, the value undefined will be passed
+                              for use as its "this" value.
+    
+    // Simple Example
+        var numbers = [1, 4, 9];
+        var roots = numbers.map(Math.sqrt);
+        // roots is now [1, 2, 3]
+        // numbers is still [1, 4, 9]
+
+    // Example - Using .map() to reformat objects IN AN ARRAY
+        var a = [{key:1, value:10}, 
+                 {key:2, value:20}, 
+                 {key:3, value: 30}];
+
+        var b = a.map(function(obj){ 
+           var newObj = {};
+           newObj[obj.key] = obj.value;
+           return newObj;
+        });
+
+        // b is now [{1:10}, {2:20}, {3:30}], 
+
+        // a is still: [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}]

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Analytics Web App</title>
+    <!--- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/dd.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.custom-scrollbar.css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <!--Begin Jquery Library -->
+    <!-- /lib -->
+    <script type="text/javascript" src="js/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/jquery.custom-scrollbar.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.dd.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="js/lib/iCheck.js"></script>
+
+    <!-- /d3 -->
+    <script type="text/javascript" src="js/d3/SPEND_ANALYSIS/how-my-spend-changing-chart.js"></script>
+    <script type="text/javascript" src="js/d3/SPEND_ANALYSIS/what-i-spending-on-chart.js"></script>
+    <script type="text/javascript" src="js/d3/SPEND_ANALYSIS/what-my-spend-breakdown-treemap-chart.js"></script>
+    
+       
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/resizeD3.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!-- Begin Header -->
+    <header class="header">
+      <div class="logo-box left">
+        <a href="javascript:;">Pixel</a>
+      </div>
+      <!-- header nav -->
+      <div class="header-nav-main left">
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <span class="home-icon icons left"></span>
+                <span>Home</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="EXECUTIVE_VIEW.html">
+                <span class="exec-icon icons left"></span>
+                <span>Executive</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="SPEND_ANALYSIS.html" class="active">
+                <span class="spend-icon icons left"></span>
+                <span>Spend</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="CATEGORY_SOURCING.html">
+                <span class="source-icon icons left"></span>
+                <span>Sourcing</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="project-icon icons left"></span>
+                <span>Project</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="BENEFITS_TRACKING.html">
+                <span class="benefits-icon icons left"></span>
+                <span>Benefits</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="contract-icon icons left"></span>
+                <span>Contract</span>
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="risk-icon icons left"></span>
+                <span>Risk</span>
+                <i></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-user right">
+        <a href="javascript:;">
+          <span class="left">Hi John Snow</span>
+          <img src="i/header-user.png" alt="" class="left header-user-img">
+          <span class="yellow-arrow left"></span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </header>
+  <!-- End Header -->
+  <!-- Begin Main -->
+  <main>
+      <div class="container-fluid">
+        <!-- Begin Aside Filter -->
+        <aside class="aside-filter left">
+          <div class="aside-background"></div>
+          <div class="aside-filter-content">
+            <div class="spend-breakdown-wrapper"></div>
+            <div class="filter-spend-on-category"></div>
+            <div class="filter-spend-on-sub-category"></div>
+            <div class="spend-changing-over-time-wrapper"></div>
+          </div>
+        </aside>
+        <!-- End Aside Filter -->
+        <!-- Begin Main Content -->
+        <div class="main-content">
+          <!-- Top Navigation -->
+          <nav class="top-page-nav">
+            <ul>
+              <li>
+                <a href="javascript:;">Home<span>></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="non-active">Spend Analytics</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Spend Analytics -->
+          <div class="row">
+            <div class="content-container">
+              <div class="spend-analytics-main">
+                <div class="pages-sub-header row-left">
+                  <div class="pages-heading-box">
+                    <h4 class="left"><span class="spend-icon icons left"></span>Spend Analytics</h4>
+                    <p class="receipt-date-txt right">
+                      Receipt Date: 1/1/2014 - 4/30/2015
+                    </p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="grey-banner-box spend-analytic-top-banner">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="grey-box-inner">
+                          <p class="grey-top-txt">
+                            <span class="blue-txt">+1.21%</span>
+                            <span class="blk-txt">5Qtr</span>
+                          </p>
+                          <p class="amount-txt">$3,865M</p>
+                          <span class="total-spend-txt">total spend</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="grey-box-inner">
+                          <div>
+                            <p class="amount-txt">$1.34M</p>
+                            <span class="total-spend-txt">addressable spend</span>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-left row-bottom-exec">
+                  <div class="what-am-spend-main">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="widget-layer-box frst-wid-layer">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>What am I Spending On?</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="what-am-spend-sub two-wid-box ist">
+                            <div class="dropdown-same-line">
+                              <p class="lbl-txt left">
+                                Analyze Graph 1 by
+                              </p>
+                              <div class="select-box left">
+                                <select>
+                                  <option>Category</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="units-avail-box">
+                              <p>
+                                20 Business units are available
+                              </p>
+                              <div class="am-spend-chart">
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="what-am-spend-sub two-wid-box snd">
+                            <div class="dropdown-same-line">
+                              <p class="lbl-txt left">
+                                Analyze Graph 1 by
+                              </p>
+                              <div class="select-box left">
+                                <select>
+                                  <option>Sub-Category</option>
+                                  <option>Lorem</option>
+                                  <option>Lorem</option>
+                                </select>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="units-avail-box">
+                              <p>
+                                20 Business units are available
+                              </p>
+                              <div class="am-spend-chart-sub">
+
+                              </div>
+                            </div>
+                          </div>
+                          <p class="what-spend-note">
+                            Note: Scroll down to see more business unit
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="widget-layer-box secnd-wid-layer my-spend-break">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>What is My Spend Breakdown?</h4>
+                          </div>
+                          <div class="two-wid-box">
+                            <div class="left">
+                              <div class="dropdown-same-line viewed-on-top">
+                                <p class="lbl-txt left">
+                                  Viewed Top
+                                </p>
+                                <div class="select-box left">
+                                  <select>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                  </select>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </div>
+                            <div class="right">
+                              <div class="dropdown-same-line viewed-by">
+                                <p class="lbl-txt left">
+                                  Viewed by
+                                </p>
+                                <div class="select-box left">
+                                  <select>
+                                    <option>Business Unit</option>
+                                    <option>Lorem</option>
+                                    <option>Lorem</option>
+                                  </select>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="spend-break-down-graph anal-spend-break-chart">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="widget-layer-box secnd-wid-layer my-spend-change">
+                          <div class="layer-box-head without-top-arw">
+                            <h4>How is My Spend Changing Over Time?</h4>
+                            <div class="table-graph-view right">
+                              <ul>
+                                <li>
+                                  <a href="javascript:;" class="graph-view-icon icons active"></a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" class="table-view-icon icons"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="two-wid-box">
+                            <div class="left">
+                              <div class="dropdown-same-line viewed-on-top">
+                                <p class="lbl-txt left">
+                                  Viewed Top
+                                </p>
+                                <div class="select-box left">
+                                  <select>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                  </select>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="spend-change-graph how-spend-chart">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-left">
+                  <!-- Spend Details -->
+                  <div class="spend-details-sub">
+                    <div class="row">
+                      <div class="widget-layer-box">
+                        <div class="layer-box-head without-top-arw">
+                          <h4>Spend Details</h4>
+                        </div>
+                        <div class="spend-details-inner two-wid-box">
+                          <!-- Spend Details Slider -->
+                          <div class="anal-uislider-box spend-details-slider right">
+                            <p class="left top-projec-txt">
+                              Top Projects
+                            </p>
+                            <div class="spend-uislider-box anal-uislider-box left js-uislider">
+                              <div class="js-anal-projects-slider">
+                              </div>
+                            </div>
+                            <input type="text" class="js-anal-val spend-det-slider-no">
+                            <div class="clearfix"></div>
+                          </div>
+                          <!-- spend Details table -->
+                          <div class="spend-details-table sort-table">
+                            <table class="main-table-view spend-details-table">
+                              <thead>
+                                <tr>
+                                  <th><span class="tab-col"># Invoice<span class="yellow-arrow"></span></span></th>
+                                  <th><span class="tab-col">Receipt Date<span class="yellow-arrow"></span></span></th>
+                                  <th><span class="tab-col">Supplier<span class="yellow-arrow"></span></span></th>
+                                  <th><span class="tab-col">Country<span class="yellow-arrow"></span></span></th>
+                                  <th><span class="tab-col">General Ledger<span class="yellow-arrow"></span></span></th>
+                                  <th><span class="tab-col">Total Spend<span class="yellow-arrow"></span></span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>187705</td>
+                                  <td>10/1/2015</td>
+                                  <td>Supplier_1</td>
+                                  <td>United States</td>
+                                  <td>Purchase Order</td>
+                                  <td>$10M</td>
+                                </tr>
+                                <tr>
+                                  <td>987705</td>
+                                  <td>8/1/2015</td>
+                                  <td>ASupplier_1</td>
+                                  <td>AUnited States</td>
+                                  <td>APurchase Order</td>
+                                  <td>$10M</td>
+                                </tr>
+                                <tr>
+                                  <td>087705</td>
+                                  <td>5/1/2015</td>
+                                  <td>BSupplier_1</td>
+                                  <td>BUnited States</td>
+                                  <td>BPurchase Order</td>
+                                  <td>$9M</td>
+                                </tr>
+                                <tr>
+                                  <td>87705</td>
+                                  <td>10/1/2015</td>
+                                  <td>Supplier_1</td>
+                                  <td>United States</td>
+                                  <td>Purchase Order</td>
+                                  <td>$10M</td>
+                                </tr>
+                                <tr>
+                                  <td>87705</td>
+                                  <td>10/1/2015</td>
+                                  <td>Supplier_1</td>
+                                  <td>United States</td>
+                                  <td>Purchase Order</td>
+                                  <td>$10M</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+        <div class="clearfix"></div>
+      </div>
+  </main>
+  <!-- End Main -->
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2016 Deloitte Development LLC. All rights reserved.
+    </p>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

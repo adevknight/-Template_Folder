@@ -1,0 +1,111 @@
+> Negative Margin - Floated Element
+  Floated Element = Element with FLOAT applied to it.
+
+  - IF A Negative Margin Applied in Floated Element (.negatived in following example), then
+    ## CASE A - display:block
+    <div class="container">
+      <div class="negatived">Negative Margin</div>
+      <div class="succeding">Succeding Element</div>
+    </div>
+    with
+      .container {
+        display: block;
+        height: 120px;
+      }
+      .negatived {
+        float: left;
+        height: 50px;
+      }
+      .succeding {
+        height: 50px;
+      }
+    -- IF .negatived {margin-top = -30px}
+       It will make .negatived to MOVE UPWARDS by 30px
+       ALSO it will make .succeding block to WRAP (width = 100% of .container)
+       ALSO it will make .succeding content to WRAP in respect to .negatived 
+       ALSO it will make .container TO MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+       NOTE: - Will not make vertical scrollbar to appear.
+             - If we set margin-left: 50px and margin-top: 50px to .container
+               We will see the new position of .negatived, and .succeding.
+             - IF .container {display: inline-block} 
+               THEN the .container width will be THE LONGEST WIDTH BETWEEN .negatived and .succeding (Even when they set the width property).
+
+    -- IF .negatived {margin-left = -30px}
+       IF no "width" is applied to .negatived and .succeding.
+        It will JUST make .negatived to MOVE by 30px to the LEFT
+        NOTE: - Will not make horizontal scrollbar to appear.
+              - If we set margin-left: 50px and margin-top: 50px to .container
+                We will see the new position of .negatived surpass the .container.
+              - IF .container {display: inline-block} 
+               THEN the .container width will be THE LONGEST WIDTH BETWEEN .negatived and .succeding (BEFORE the EXTENDED .negatived width appear).
+               AND the .container NEVER MOVE TO THE LEFT AND IT WILL MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+       IF "width: 150px or width:100%" is applied to .negatived and .succeding.
+        It will JUST make .negatived to MOVE by 30px to the LEFT.
+        NOTE: - Will not make horizontal scrollbar to appear.
+              - If we set margin-left: 50px and margin-top: 50px to .container
+                We will see the new position of .negatived surpass the .container.
+              - IF .container {display: inline-block} 
+               THEN the .container width will be 150px or THE LONGEST WIDTH BETWEEN .negatived and .succeding.
+               AND the .container NEVER MOVE TO THE LEFT AND IT WILL MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+
+    -- IF .negatived {margin-bottom = -30px}
+       It will JUST make .succeding to MOVE UPWARDS overlap the .negatived (like absolute positioned element) by 30px
+       NOTE: - Will not make vertical scrollbar to appear.
+             - If we set margin-left: 50px and margin-top: 50px to .container
+               We will see the new position of .succeding.
+             - IF .container {display: inline-block} 
+               THEN the .container width will be THE LONGEST WIDTH BETWEEN .negatived and .succeding (Even when they set the width property).
+               AND the .container NEVER MOVE AND IT WILL MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+
+    -- IF .negatived {margin-right = -30px}
+       IF no "width" is applied to .negatived and .succeding.
+        It will JUST make .negatived to EXTEND THE WIDTH by 30px to the RIGHT
+        NOTE: - Will make horizontal scrollbar to appear.
+              - We will see right away the extended width of .negatived surpass the .container.
+              - IF .container {display: inline-block} 
+                THEN the .container width will be THE LONGEST WIDTH BETWEEN .negatived and .succeding (BEFORE the EXTENDED .negatived width appear).
+                AND the .container NEVER MOVE AND IT WILL MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+       IF "width: 150px or width:100%" is applied to .negatived and .succeding.
+        NOTHING WILL HAPPEN.
+        NOTE: - IF .container {display: inline-block}
+                THEN NOTHING WILL HAPPEN 
+                AND the .container width will be THE LONGEST WIDTH BETWEEN .negatived and .succeding.
+                AND the .container NEVER MOVE AND IT WILL MAINTAIN THE WIDTH, HEIGHT, AND POSITION.
+
+    ## CASE B - display:inline-block
+    <div class="container">
+      <div class="negatived">Negative Margin</div>
+      <div class="succeding">Succeding Element</div>
+    </div>
+    with
+      .container {
+        display: block;
+        height: 120px;
+      }
+      .negatived {
+        display: inline-block;
+        height: 50px;
+      }
+      .succeding {
+        display: inline-block;
+        height: 50px;
+      }
+    -- IF .negatived {margin-top = -30px}
+       NOTHING WILL HAPPEN.
+
+    -- IF .negatived {margin-left = -30px}
+       It will make .negatived to MOVE by 30px to the LEFT.
+       ALSO It will make .succeding to MOVE by 30px to the LEFT.
+       NOTE: - Will not make horizontal scrollbar to appear.
+             - If we set margin-left: 50px and margin-top: 50px to .container
+               We will see the new position of .negatived and .succeding surpass the .container.
+             - IF .container {display: inline-block} THEN ITS WIDTH WILL SHRUNK by 30px.
+
+    -- IF .negatived {margin-bottom = -30px}
+       NOTHING WILL HAPPEN.
+
+    -- IF .negatived {margin-right = -30px}
+       It will JUST make .succeding to MOVE LEFT overlap the .negatived (like absolute positioned element) by 30px
+       NOTE: - Will make horizontal scrollbar to appear.
+             - We will see right away the extended width of .negatived surpass the .container.
+             - IF .container {display: inline-block} THEN ITS WIDTH WILL SHRUNK by 30px.

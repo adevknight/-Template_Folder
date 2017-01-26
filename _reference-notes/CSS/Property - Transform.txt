@@ -1,0 +1,23 @@
+... List of Transform Properties
+      transform
+      transform-origin
+      transform-box
+      transform-style
+... List of "transform" Value
+      none
+      matrix      matrix3d
+      perpective  
+      rotate      rotate3d      rotateX     rotateY     rotateZ         
+      scale       scale3d       scaleX      scaleY      scaleZ
+      skew                      skewX       skewY
+      translate   translate3d   translateX  translateY  translateZ
+      unset
+    ... "none"
+      To reset the transform object to original shape, position, and size.
+
+    ... "matrix"
+      It is best to use multiple transform rather than this value.
+      E.g : transform: translate(10px, 30px) rotate(30deg) scale(2, 1.5) skewX(23deg).
+    
+    ... "scaleY(-1)""
+      To reflect it by horizontal line or to reflect it vertically for scale of 1.

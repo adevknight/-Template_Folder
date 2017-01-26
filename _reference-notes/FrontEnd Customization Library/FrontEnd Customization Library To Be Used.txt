@@ -1,0 +1,13 @@
+> jquery.custom-scrollbar.js
+  jQuery Custom Scrollbar is a jQuery plugin that lets you add fully customizable scrollbars to your sites. With the plugin you can apply any css styles you want to your scrollbars.
+
+> jquery.dd.js
+  Simple replacement for <select> boxes that are totally CSS stylable.
+
+> jquery.tablesorter.js - 
+  Tablesorter is a jQuery plugin for turning a standard HTML table with THEAD and TBODY tags
+  into a sortable table without page refreshes.
+
+> iCheck.js - 
+  Super Customized Checkboxes and Radio Buttons for jQuery & Zepto,
+  Works on all platform including mobile devices.

@@ -1,0 +1,84 @@
+{
+  "heading": "Variance Heat Map",
+  "dataset": {
+    "name": "Variance Heat Map",
+    "series": [
+      {
+        "name": "Lowest",
+        "color": "#f7dcdd",
+        "min": 0,
+        "max": 24
+      },
+      {
+        "name": "Lower",
+        "color": "#eaa8a9",
+        "min": 25,
+        "max": 49
+      },
+      {
+        "name": "Higher",
+        "color": "#de7475",
+        "min": 50,
+        "max": 74
+      },
+      {
+        "name": "Highest",
+        "color": "#d65153",
+        "min": 75,
+        "max": 100
+      }
+    ],
+    "data": [
+      {
+        "name": "REGION_1",
+        "value": [
+          {"name": "CATEGORY_1", "value": 20},
+          {"name": "CATEGORY_2", "value": 30},
+          {"name": "CATEGORY_3", "value": 50},
+          {"name": "CATEGORY_4", "value": 6},
+          {"name": "CATEGORY_5", "value": 100}
+        ]
+      },
+      {
+        "name": "REGION_2",
+        "value": [
+          {"name": "CATEGORY_1", "value": 50},
+          {"name": "CATEGORY_2", "value": 40},
+          {"name": "CATEGORY_3", "value": 80},
+          {"name": "CATEGORY_4", "value": 30},
+          {"name": "CATEGORY_5", "value": 80}
+        ]
+      },
+      {
+        "name": "REGION_3",
+        "value": [
+          {"name": "CATEGORY_1", "value": 70},
+          {"name": "CATEGORY_2", "value": 90},
+          {"name": "CATEGORY_3", "value": 40},
+          {"name": "CATEGORY_4", "value": 70},
+          {"name": "CATEGORY_5", "value": 40}
+        ]
+      },
+      {
+        "name": "REGION_4",
+        "value": [
+          {"name": "CATEGORY_1", "value": 10},
+          {"name": "CATEGORY_2", "value": 30},
+          {"name": "CATEGORY_3", "value": 5},
+          {"name": "CATEGORY_4", "value": 50},
+          {"name": "CATEGORY_5", "value": 70}
+        ]
+      },
+      {
+        "name": "REGION_5",
+        "value": [
+          {"name": "CATEGORY_1", "value": 40},
+          {"name": "CATEGORY_2", "value": 10},
+          {"name": "CATEGORY_3", "value": 90},
+          {"name": "CATEGORY_4", "value": 20},
+          {"name": "CATEGORY_5", "value": 10}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+1. Testing GitHub collaboration, to know how to manage pull request,
+to do pull merge branch (handle pull req) from command shell.
+2. Testing various pulgin for sublime to do "diff" operation.
+----------------- 4. How to undo changes that already committed.
+5. git add . vs git add -A
+6. git rebase
+
+git reset --hard
+git clean -fd
+git checkout -- .
+git checkout -- app/views/posts/index.html.erb
+git checkout -- *
+git clean -fdx
+git stash
+git stash drop
+======================
+git reset
+git checkout .
+git checkout [some_dir|file.txt]
+git reset --hard HEAD
+git clean -fdx
+git rm --cached .
+git rm --cached <FILENAME>
+

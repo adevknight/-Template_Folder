@@ -1,0 +1,56 @@
+{
+  "heading": "Span of Control by Layer",
+  "layers": [
+    {
+      "name": "Layer_1",
+      "xPositive": 6.4,
+      "yPositive": 6.4
+    },
+    {
+      "name": "Layer_2",
+      "xPositive": 6.1,
+      "yPositive": 6.1
+    },
+    {
+      "name": "Layer_3",
+      "xPositive": 4.9,
+      "yPositive": 4.9
+    },
+    {
+      "name": "Layer_4",
+      "xPositive": 5.4,
+      "yPositive": 5.4
+    },
+    {
+      "name": "Layer_5",
+      "xPositive": 6.0,
+      "yPositive": 6.0
+    },
+    {
+      "name": "Layer_6",
+      "xPositive": 5.4,
+      "yPositive": 5.4
+    },
+    {
+      "name": "Layer_7",
+      "xPositive": 4.2,
+      "yPositive": 4.2
+    },
+    {
+      "name": "Layer_8",
+      "xPositive": 3.7,
+      "yPositive": 3.7
+    },
+    {
+      "name": "Layer_9",
+      "xPositive": 0,
+      "yPositive": 0
+    }
+  ],
+  "axisInfo": [
+    {
+      "yAxisText": "MANAGEMENT LEVEL",
+      "xAxisText": "AVERAGE SOC"
+    }
+  ]
+}

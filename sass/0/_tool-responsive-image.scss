@@ -1,0 +1,42 @@
+/* ---< _tool-responsive-image.scss >--- */
+ 
+/* Setting Up Responsive Image */
+img {
+    max-width: 100%;
+}
+
+// Auto Media Query Generator for Background Image
+// Method 1
+$normalImageUrl: '../i/x1/';
+$retinaImageUrl: '../i/x2/';
+
+@mixin retBg($image, $size) {
+  @media (-webkit-device-pixel-ratio: 2), (resolution: 2dppx) {
+    background-image: url($retinaImageUrl+$image);
+    background-size: $size;
+    background-repeat: no-repeat;
+  }
+  background-image: url($normalImageUrl+$image);
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+.class-name {
+  @include retBg('image-name.png', rrem(24px) rrem(26px));
+}
+// Method 2
+$imageUrl: '../i/';
+
+@mixin retBg($image, $ext, $size) {
+  @media (-webkit-device-pixel-ratio: 2), (resolution: 2dppx) {
+    background-image: url($imageUrl + '#{$image}'+'@2x.'+'#{$ext}');
+    background-size: $size;
+    background-repeat: no-repeat;
+  }
+  background-image: url($imageUrl + '#{$image}.'+'#{$ext}');
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+.class-name {
+  @include retBg('image-name', png, rrem(24px) rrem(26px));
+}

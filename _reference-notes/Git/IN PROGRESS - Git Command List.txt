@@ -1,0 +1,209 @@
+Secondary Commands
+
+> git --version
+      // Get the Git version number.
+
+> git help
+      // List all of the help topics to learn.
+  git help commit
+      // Open commit topic from the list of all topics.
+
+> pwd
+      // Check current directory address on Git Bash.
+
+> cd /c/
+      // Change directory to C:/ on Git Bash.
+
+  To create a new file from Git Bash
+  > touch touch newFile.txt
+      // only creates.
+  > echo > newFile.txt
+      // only creates.
+  > cat > newFile.txt
+      // creates and can start appending to file.
+  > vim newFile.txt
+      // creates and can start editing the file.
+------------------------------------------------------------------------------------------------------------------------
+
+Configure Git User
+
+On Global Space
+> git config --global user.name "Your Name Here"
+      // Setup default global username.
+
+> git config --global --unset-all user.name
+      // To remove previous user.name in global configuration
+
+> git config --global user.email "youremail.gmail.com"
+      // Setup default global email.
+
+> git config --global --unset-all user.email
+      // To remove previous user.email in global configuration
+
+> git config --list
+      // List all of the current settings/setup from global space.
+
+On Local Project Space (Executed on Project Folder)
+> git config user.name "Your Name Here"
+      // Setup username for current project.
+
+> git config user.email "youremail@gmail.com"
+      // Setup email for current project.
+
+> git config --local --list
+      // List all of the current settings/setup from current project.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Very first steps to take during project initiation
+
+1. Create New Folder for The Project.
+
+2. Right Click (Inside Project Folder) > Git Bash Here
+   or
+   > cd "C:\Folder\Folder\Project_Folder"
+
+4. Re-configure username and email (IF NEEDED)
+   > git config user.name "Your New Name"
+   > git config user.email "youremail@gmail.com"
+
+3. Git Initialization
+   > git init
+
+------------------------------------------------------------------------------------------------------------------------
+
+  Steps to take when ready to make commit
+
+0. OPTIONAL steps to take
+   > git status
+        // To check what is currently in staging index
+           and is there any UNTRACKED changes on project folder that are not reflected on repository stage.
+   
+   > git log
+        // To see list of all the past commits (commit's history).
+        // Sometimes you want to see commits history in "more beautified" way, in order to do that, you need to setup an alias
+           Setting up an alias
+           > git config --global alias.log1 "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+           So next time instead of typing
+           > git log
+           You should just type
+           > git log1
+           In order to see the "beautified" version of git log.
+
+   > git diff
+        // To check the difference between file content in current working copy and in repository.
+   
+   > git diff --staged
+        // To check the difference between file content in staging index and in repository.
+
+1. Add it to  STAGING INDEX (TO COMMIT LATER)
+   > git add . #########################################################################################################
+        // to add all files to the STAGING INDEX
+   or
+   > git add index.html
+        // To add only index.html to the STAGING INDEX
+
+2. Commit it (Add the changes to REPOSITORY INDEX)
+   > git commit -m "Commit Message Insert Here"
+
+Notes:
+   IF you want a shortcut to make 'add'-ing and 'commit'-ing process simpler or in one-line type, do following:
+   > git config --global alias.addcomm '!git add -A && git commit'
+      // To configure alias for it first, then you can do following
+   > git addcomm -m 'my commit message'
+
+------------------------------------------------------------------------------------------------------------------------
+
+Undoing Changes
+
+You can set (override) a file in working copy to latest version (previous commit) resided on repository index by:
+> git checkout -- index.html
+
+You can set (override) a file in working copy to certain commit version resided on repository index by:
+> git checkout 0m3j4g1 -- index.html
+        // 0m3j4g1 is short version of HASH value, you can just mention some of the HASH value no need to type all of HASH value
+
+You can merge a new changes (after commit has been done) to the LATEST COMMIT on CURRENT BRANCH by using "amend":
+> git add .
+> git commit --amend -m "New Message Here"
+        // "amend" command ONLY WORKS on LATEST COMMIT POINT.
+
+You can also unstage a file or remove a file/changes from staging index
+> git reset HEAD index.html
+
+------------------------------------------------------------------------------------------------------------------------
+
+Dealing with Branches
+
+1. List of branches
+   > git branch -a
+        // List all branches (local & remote branches)
+   > git branch
+        // List all of local branches
+   > git branch -r
+        // List all of remote branches
+
+2. Adding new branch
+   > git branch newBranchName
+
+3. Renaming current branch
+   > git branch -m newNameForTheBranch
+        // This will rename currently selected/active branch to newNameForTheBranch
+
+3. Deleting a branch
+   Deleting LOCAL branches:
+   > git branch -d branchName
+        // Delete the specified branch. This is a SAFE operation in that Git prevents you from deleting the branch
+           if it has UNMERGED changes.
+
+   > git branch -D branchName
+        // Delete the specified branch. This is a FORCED operation in that Git will force to delete branch
+           EVEN IF it has UNMERGED changes.
+
+   Deleting REMOTE branches (it will delete BOTH remote branches, on remote location/GitHub AND on the local computer's
+   remote branch):
+   > git push repoNickname --delete branchName
+
+4. Moving/checking-out to a branch
+   > git checkout branchName
+
+5. Merging two branches (currently active branch and branchName)
+   > git merge branchName
+     It will merge branchName INTO currently active branch.
+   or
+   > git merge repoNickname/branchName
+     IF this message occured: "fatal: refusing to merge unrelated histories"
+   > git merge repoNickname/branchName --allow-unrelated-histories
+
+Notes:
+   You can speed-up the process of creating a new branch (No 2) and then checking out to the newly created branch (No 4) by:
+   > git checkout -b newBranchName
+
+------------------------------------------------------------------------------------------------------------------------
+
+Dealing with REMOTE Repository (e.g. GitHub, etc)
+
+1. Create a nickname (or reference to specific remote)
+   > git remote add nickname https://github.com/adevknight/something.git
+
+2. List of all assigned remote's nickname and correspondance URLs
+   > git remote
+   or
+   > git remote -v
+
+3. How to change a remote's URL
+   There are 2 types of URL for remotes:
+   HTTPS (USE THIS) - like https://github.com/USERNAME/OTHERREPOSITORY.git
+   SSH - like git@github.com:USERNAME/OTHERREPOSITORY.git
+
+   Change existing remote URL from HTTPS to SSH
+   > git remote set-url nickname git@github.com:USERNAME/OTHERREPOSITORY.git
+
+   Change existing remote URL from SSH to HTTPS
+   > git remote set-url nickname https://github.com/USERNAME/OTHERREPOSITORY.git
+
+4. Renaming nickname of the URL
+   > git remote rename oldnickname newnickname
+
+5. Removing nickname and the correspondence URL
+   > git remote rm nickname

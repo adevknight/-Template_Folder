@@ -1,0 +1,21 @@
+{
+  "heading": "Directors  with “0” Direct Reports",
+  "waterFall": [
+    {"label": "S.MARIPURI (HEALTHCARE)", "value": 28},
+    {"label": "R.SCHASSLER (MOBILITY)", "value": 10},
+    {"label": "R.WEIDEMAN (ENTERPRISE)", "value": 7},
+    {"label": "W.ROBBINS (SALES)", "value": 6},
+    {"label": "W.DANIEL (CORP-FINANCE)", "value": 5},
+    {"label": "M.RICH (IMAGING)", "value": 4},
+    {"label": "VLADIMIR.S (CORP-R&D)", "value": 3},
+    {"label": "T.BROWN IV (CORP-T)", "value": 3},
+    {"label": "D.HOWART (CORP-HR)", "value": 2},
+    {"label": "K.SIEGEL (LEGAL)", "value": 2},
+    {"label": "R.MARTEL (PROCURE..)", "value": 2},
+    {"label": "W.BOWDEN (CORP-DEV)", "value": 1}
+  ],
+  "waterFallAxis": [{
+    "xAxisText": "#REPORTS",
+    "yAxisText": "DIVISION LEADER"
+  }]
+}

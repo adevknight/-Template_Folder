@@ -1,0 +1,128 @@
+/* ---< _variable-typography.scss >--- */
+
+/* Notes:
+.eot used in < IE9
+.woff used in High-End NON IE and New IE - Recommended in Future
+.ttf and .otf used in Low-End NON IE
+.svg used in iOS Device
+*/
+
+/* Font Declaration */
+// Method 1 ----------------------------------------------
+@font-face {
+  font-family: 'Proxima Nova Reg';
+  src: url('../fonts/Proxima Nova Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/Proxima Nova Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Sbold';
+  src: url('../fonts/Proxima Nova Sbold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/Proxima Nova Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Typography Variable Declaration
+$baseFontSize: 16px;
+$font1Reg: 'Proxima Nova Reg', Arial, sans-serif;
+$font1Light: 'Proxima Nova Light', Arial, sans-serif;
+$font1Sbold: 'Proxima Nova Sbold', Arial, sans-serif;
+$font1Bold: 'Proxima Nova Bold', Arial, sans-serif;
+
+// Usage
+.className {
+  font-family: $font1Reg;
+  font-weight: normal; // Must be present
+  font-style: normal; // Must be present
+}
+
+// Method 2 ----------------------------------------------
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/Proxima Nova Reg.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/Proxima Nova Light.otf') format('opentype');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/Proxima Nova Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+
+// Typography Variable Declaration
+$baseFontSize: 16px;
+$font1: 'Proxima Nova', Arial, sans-serif;
+
+// Method 3 ----------------------------------------------
+// Importing Open Sans Family from Google Web Fonts - Normal, Normal Italic, Light, and Bold
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic);
+
+// Assigning 'font-weight' variables
+$light: 300;
+$normal: 400; 
+$bold: 700;
+
+// Typography Variable Declaration
+$baseFontSize: 16px;
+$font1: 'Open Sans', Arial, sans-serif;
+
+// Method 4 ----------------------------------------------
+@font-face {
+  font-family: 'FontName';
+  src: url('FontName.eot');
+  src: url('FontName.eot?#iefix') format('embedded-opentype'),
+       url('FontName-webfont.woff') format('woff'),
+       url('FontName-webfont.ttf') format('truetype'),
+       url('FontName-webfont.svg#FontName') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Typography Variable Declaration
+$baseFontSize: 16px;
+$font1: 'FontName', Arial, sans-serif;
+
+// -------------------------------------------------------
+
+/* Setting Default Document */
+html, body {
+  font-family: $font1;
+  font-size: $baseFontSize;
+}
+
+// Mixin for Font Shortcut
+@mixin font($family, $size) {
+  font-family: $family;
+  font-size: $size;
+}
+%font1 {
+  font-family: $font1;
+  font-weight: normal;
+  font-style: normal;
+}
+%font2 {
+  font-family: $font2;
+  font-weight: normal;
+  font-style: normal;
+}
+%hideText {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,19 @@
+Methods List:
+
+> .attr()
+   Get the value of an attribute for the first element in the set of matched elements
+   or set one or more attributes for every matched element.
+
+> .prop()
+   Get the value of a property for the first element in the set of matched elements
+   or set one or more properties for every matched element.
+
+> .removeAttr()
+   Remove an attribute from each element in the set of matched elements.
+
+> .removeProp()
+   Remove a property for the set of matched elements.
+
+> .val()
+   Get the current value of the first element in the set of matched elements
+   or set the value of every matched element.

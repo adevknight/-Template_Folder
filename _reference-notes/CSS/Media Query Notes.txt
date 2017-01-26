@@ -1,0 +1,89 @@
+/* Media Queries Notes */
+// Specification : http://www.w3.org/TR/mediaqueries-4/
+
+
+> Syntax in HTML HEAD Tag
+  // AND Feature
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="only screen 
+    and (min-width : 601px)
+    and (max-width : 1140px)">
+
+  // OR Feature
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="only screen
+    and (max-width : 601px),
+    (min-width : 1140px)">
+
+  // NOT Feature
+  // Select iPhone 3 BUT NOT iPhone 4 or 5 with Retina Display
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="only screen 
+    and (min-device-width : 640px)
+    and not (-webkit-min-device-pixel-ratio : 2)">
+
+
+> Syntax in CSS File
+  // AND Feature
+  @media only screen and (min-width : 601px) and (max-width : 1140px) {...}
+
+  // OR Feature
+  @media only screen and (max-width : 601px), (min-width : 1140px) {...}
+
+  // NOT Feature
+  @media only screen and (min-device-width : 640px) and not (-webkit-min-device-pixel-ratio : 2) {...}
+
+
+> Media Features List
+
+width, min-width, max-width (horizontal-axis)
+      // width of viewport (i.e Browsers) - in Desktop, it will change as we change the browser width
+      // it will change as we change orientation, (on iOS it will change as the orientation change as long as we do not put width=device-width on meta viewport tag)
+      // Unit Used = CSS Pixels not Device Pixels (e.g width=320px although the Device Pixels = 640px)
+      // Best practice to use this over device-width, especially for responsive design
+
+height, min-height, max-height (vertical-axis)
+      // height of viewport (i.e Browsers) - in Desktop, it will change as we change the browser height
+      // it will change as we change orientation
+      // Unit Used = CSS Pixels not Device Pixels (e.g height=320px although the Device Pixels = 640px)
+      // Best practice to use this over device-height, especially for responsive design
+
+device-width, min-device-width, max-device-width
+      // width of device - Never Change on iOs Devices (iPhone and iPad) regardless of Device Orientation - device-width=320px on iPhone 5 Portrait and Landscape Mode
+      // width of device - Change on Other Devices as the Device Orientation changes - device-width=360px on Samsung Galaxy S III in Portrait Mode and device-width=640px in Landscape Mode
+      // Unit Used = CSS Pixels not Device Pixels (e.g device-width=320px although the Device Pixels = 640px)
+
+device-height, min-device-height, max-device-height
+      // height of device - Never Change on iOs Devices (iPhone and iPad) regardless of Device Orientation - device-height=568px on iPhone 5 Portrait and Landscape Mode
+      // height of device - Change on Other Devices as the Device Orientation changes - device-height=640px on Samsung Galaxy S III in Portrait Mode and device-height=360px in Landscape Mode
+      // Unit Used = CSS Pixels not Device Pixels (e.g device-height=640px although the Device Pixels = 1280px)
+
+orientation, 
+      // either "portrait == vertical-axis > horizontal-axis" or "landscape == horizontal-axis > vertical-axis"
+
+aspect-ratio, min-aspect-ratio, max-aspect-ratio --> DEPRECATED
+      // aspect ratio of viewport (i.e Browsers) - in Desktop, it will change as we change the browser height/width
+      // aspect-ratio = larger(portrait-height)/smaller(portrait-width) (e.g for Browser with aspect-ratio : 4/3)
+
+device-aspect-ratio, min-device-aspect-ratio, max-device-aspect-ratio --> DEPRECATED 
+      // aspect ratio of device - It will never change as we change the browser height/width
+      // Never Change as we change orientation of the device
+      // aspect-ratio = larger(portrait-device-height)/smaller(portrait-device-width) (e.g for iPhone 5 the aspect-ratio : 16/9)
+ 
+resolution, min-resolution, max-resolution (CORRELATED with device-pixel-ratio)
+      // Accepted Units : dpi (dot per 'CSS' inch), dpcm (dot per 'CSS' cm), and dppx (dot per 'CSS' pixel)
+      // Use dppx first, and then dpi for fallback scenario
+      // dpcm is rarely used
+      // Conversion Rates:
+        > 1dppx = 1 device-pixel-ratio
+        > 1dppx = 96dpi
+        > 1dpcm = 2.54dpi
+
+device-pixel-ratio, min-device-pixel-ratio, max-device-pixel-ratio (CORRELATED with resolution)
+      // device-pixel-ratio = Device Pixel (Height) / CSS Pixel (Height)
+      // iPhone 5 has 1136px of Device Pixels Height and 568px of CSS Pixels Height, so device-pixel-ratio = 2
+      //  -webkit-device-pixel-ratio (USE This)
+      // -moz-device-pixel-ratio (DO NOT USE This instead look at 'resolution' media feature for Firefox 16 and newer)
+
+> Notes:
+      // CSS Pixel <= Device Pixel
+      // CSS Pixel = Logical  Pixel
+      // Device Pixel =  Physical Pixel
+      // Physical Pixel >= Logical Pixel
